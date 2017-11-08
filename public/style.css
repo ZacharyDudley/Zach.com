@@ -1,0 +1,166 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  /* display: flex;
+  flex-direction: row; */
+  background-image: url("/images/LinePortrait.png");
+  background-repeat: no-repeat;
+  background-position: 32em, 0em;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#mainBox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+/* SIDEBAR MENU */
+
+#sideMenu {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 20%;
+  background-color: #ababab;
+  border: 0.5rem solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* SIDEBAR NAME */
+
+#sideMenu-name {
+  cursor: pointer;
+  transition: all 0.5s;
+  flex: 0 1 10%;
+}
+
+#sideMenu-name p {
+  text-align: left;
+  font-size: 6vh;
+  line-height: 1;
+}
+
+#sideMenu-name span {
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+}
+
+#sideMenu-name span:after {
+  content: 'UDLEY';
+  transition: 0.5s;
+  position: absolute;
+  opacity: 0;
+}
+
+#sideMenu-name:hover span:after {
+  opacity: 1;
+}
+
+
+/* SIDEBAR LINKS */
+
+#sideMenu-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#sideMenu-nav a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: black;
+  text-transform: lowercase;
+  font-size: 3vh;
+  padding: 3vh;
+}
+
+#sideMenu-nav a:hover {
+  color: white;
+  text-shadow:
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px,
+  #000000 0px 0px 2px;
+
+}
+
+#sideMenu-nav .active {
+  text-transform: uppercase;
+  font-size: 4vh;
+}
+
+
+/* MAIN BODY */
+
+#root {
+  display: flex;
+  flex: 1 1 75%
+}
+
+/* PAGES */
+
+.contentBox {
+  flex: 0 1 80%;
+  margin-left: 1em;
+}
+
+.contentBox p {
+  text-indent: 1.5em each-line;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* MEDIA BREAKPOINTS */
+
+@media screen and (max-width: 480px) {
+  .pageBox {
+    flex-direction: column;
+  }
+  #sideMenu-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #sideMenu-nav a {
+    padding: 0vh;
+    align-self: flex-start;
+  }
+  #sideMenu-nav .active {
+    font-size: 4.5vh;
+  }
+  #sideMenu-name {
+    padding: 0;
+  }
+  #sideMenu-name p {
+    font-size: 5vh;
+    text-align: center;
+  }
+  #sideMenu-name span {
+    position: relative;
+  }
+  #sideMenu-name span:after {
+    content: 'UDLEY';
+    transition: 0s;
+    position: relative;
+    opacity: 1;
+  }
+}
