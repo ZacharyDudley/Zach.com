@@ -115,11 +115,17 @@ body {
 
 .contentBox {
   flex: 0 1 80%;
-  margin-left: 1em;
 }
 
-.contentBox p {
-  text-indent: 1.5em each-line;
+.section {
+  border: 0.5rem solid black;
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+}
+
+.section p {
+  margin-left: 2em;
 }
 
 /* FOOTER */
