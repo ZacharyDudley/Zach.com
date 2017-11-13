@@ -5,6 +5,7 @@ const Sidebar = () => {
 
   return (
     <div id="sideMenu">
+    <div id="sideMenu-fixed">
       <div id="sideMenu-name">
         <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
       </div>
@@ -15,6 +16,7 @@ const Sidebar = () => {
         <NavLink to="/blog">BLOG</NavLink>
         <NavLink to="/resume">RE&#769;SUME&#769;</NavLink>
         <NavLink to="/contact">CONTACT</NavLink>
+      </div>
       </div>
     </div>
   )
