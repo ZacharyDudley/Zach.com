@@ -3,7 +3,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   /* display: flex;
   flex-direction: row; */
-  background-image: url("/images/LinePortrait.png");
+  /* background-image: url("/images/LinePortrait.png"); */
   background-repeat: no-repeat;
   background-position: 32em, 0em;
   background-attachment: fixed;
@@ -25,7 +25,7 @@ body {
 #sideMenu {
   display: flex;
   flex-direction: column;
-  flex: 0 1 20%;
+  flex: 0 1 28%;
 }
 
 #sideMenu-fixed {
