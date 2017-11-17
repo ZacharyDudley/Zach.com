@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 const Sidebar = () => {
 
   return (
+
     <div id="sideMenu">
-    <div id="sideMenu-fixed">
       <div id="sideMenu-name">
         <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
       </div>
@@ -18,7 +18,7 @@ const Sidebar = () => {
         <NavLink to="/contact">CONTACT</NavLink>
       </div>
       </div>
-    </div>
+
   )
 }
 
