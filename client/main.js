@@ -1,8 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Routes from './Routes'
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <Routes />,
-  document.getElementById('main')
-)
+const Main = props => {
+  const { children } = props
+
+  return (
+    <div id="mainBox">
+      {children}
+    </div>
+  )
+}
+
+export default withRouter(Main)
