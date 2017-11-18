@@ -1,5 +1,5 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React from 'react'
+// import { withRouter } from 'react-router'
 
 const Main = props => {
   const { children } = props
@@ -11,4 +11,4 @@ const Main = props => {
   )
 }
 
-export default withRouter(Main)
+export default Main
