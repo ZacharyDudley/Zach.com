@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, browserHistory } from 'react-router-dom';
+import Main from './Main';
 import Sidebar from './Sidebar';
 import Home from './Home';
 import Portfolio from './Portfolio';
@@ -10,9 +11,9 @@ import Contact from './Contact';
 const Routes = () => {
 
     return (
-      <Router>
-        <div id="mainBox">
-          <Sidebar />
+      <Router history={browserHistory}>
+          <Main>
+              <Route path="/" component={Sidebar} />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/portfolio" component={Portfolio} />
@@ -21,7 +22,7 @@ const Routes = () => {
                 <Route path="/contact" component={Contact} />
                 <Route component={Home} />
               </Switch>
-          </div>
+          </Main>
       </Router>
   )
 }
