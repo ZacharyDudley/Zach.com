@@ -25,18 +25,11 @@ body {
 #sideMenu {
   display: flex;
   flex-direction: column;
-  /* flex: 0 0 28%; */
-/* }
-
-#sideMenu-fixed { */
-  /* position: fixed; */
   background-color: #ababab;
-  /* height: 90vh; */
   border: 0.5rem solid black;
   padding: 0.5rem;
   margin: 0.5rem;
   margin-bottom: 1.5rem;
-
 }
 
 
@@ -128,14 +121,25 @@ body {
 
 .section {
   border: 0.5rem solid black;
-  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0.5rem;
 
 }
 
 .section p {
+  margin-left: 1.5em;
+}
+
+.section h3 {
   margin-left: 2em;
 }
+
+.section a {
+  text-decoration: none;
+  color: black;
+}
+
 
 /* FOOTER */
 

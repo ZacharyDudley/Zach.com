@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, browserHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Main from './Main';
 import Sidebar from './Sidebar';
 import Home from './Home';
@@ -11,7 +11,7 @@ import Contact from './Contact';
 const Routes = () => {
 
     return (
-      <Router history={browserHistory}>
+      <Router>
           <Main>
               <Route path="/" component={Sidebar} />
             <Switch>
