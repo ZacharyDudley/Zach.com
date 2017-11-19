@@ -152,8 +152,15 @@ footer {
 /* MEDIA BREAKPOINTS */
 
 @media screen and (max-width: 480px) {
-  .pageBox {
+  #mainBox {
     flex-direction: column;
+  }
+
+  #sideMenu {
+    display: inline-block;
+    padding: 0rem;
+    margin: 0;
+    margin-right: 0.5rem;
   }
   #sideMenu-nav {
     flex-direction: row;
@@ -182,4 +189,16 @@ footer {
     position: relative;
     opacity: 1;
   }
+
+  .contentBox {
+    margin-right: 0.5rem;
+  }
+  .section {
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+
 }

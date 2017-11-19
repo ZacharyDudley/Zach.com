@@ -18,7 +18,7 @@ const Resume = () => {
         <h2>EDUCATION</h2>
             <h2>Fullstack Academy of Code | <small>Chicago, IL</small></h2>
               <h3>2017</h3>
-              <p>Programming experience</p>
+              <p>Software Engineering Immersive</p>
 
             <h2>Milwaukee Area Technical College | <small>Milwaukee, WI</small></h2>
               <h3>2014 - 2017</h3>
