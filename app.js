@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require('path')
+const PORT = process.env.PORT || 3000
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -13,6 +14,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 })
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
   console.log('Listening');
 });
