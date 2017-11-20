@@ -51,10 +51,13 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="section">
-          <h2>TRAVELING SALESMAN</h2>
-            <p>Ipsum</p>
-        </div>
+        {
+          // <div className="section">
+          // <h2>TRAVELING SALESMAN</h2>
+          //   <p>Ipsum</p>
+          // </div>
+        }
+
     </div>
   )
 }
