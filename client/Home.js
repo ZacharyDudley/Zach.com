@@ -17,22 +17,35 @@ class Home extends Component {
         'CODER', 'MILLENIAL', 'ARIES',
         'EVERYMAN', 'GENTLEMAN'
       ],
-      nameOne: '',
-      nameTwo: '',
-      nameThree: ''
+      nameOne: 'DEVELOPER',
+      timeOne: 5000,
+      nameTwo: 'DESIGNER',
+      timeTwo: 3000,
+      nameThree: 'PHILOSOPHER',
+      timeThree: 4000
     }
   }
 
   setName(whichName) {
-    let randomName = Math.floor(Math.random() * this.state.names.length) + 1
+    let randomName = Math.floor(Math.random() * this.state.names.length)
     let name = this.state.names[randomName]
-
-    if (whichName === 'one') {
-      this.setState({nameOne: name})
-    } else if (whichName === 'two') {
-      this.setState({nameTwo: name})
-    } else if (whichName === 'three') {
-      this.setState({nameThree: name})
+    while (name !== this.state.nameOne && name !== this.state.nameTwo && name !== this.state.nameThree){
+      if (whichName === 'one') {
+        let time = this.setTime()
+        this.setState({nameOne: name})
+        this.setState({timeOne: time})
+        console.log('ONE: ', this.state.nameOne, this.state.timeOne)
+      } else if (whichName === 'two') {
+        let time = this.setTime()
+        this.setState({nameTwo: name})
+        this.setState({timeTwo: time})
+        console.log('TWO: ', this.state.nameTwo, this.state.timeTwo)
+      } else if (whichName === 'three') {
+        let time = this.setTime()
+        this.setState({nameThree: name})
+        this.setState({timeThree: time})
+        console.log('THREE: ', this.state.nameThree, this.state.timeThree)
+      }
     }
   }
 
@@ -43,13 +56,13 @@ class Home extends Component {
 
   componentDidMount() {
     this.displayOne = setInterval(
-      () => this.setName('one'), this.setTime())
+      () => this.setName('one'), this.state.timeOne)
 
     this.displayTwo = setInterval(
-      () => this.setName('two'), this.setTime())
+      () => this.setName('two'), this.state.timeTwo)
 
     this.displayThree = setInterval(
-      () => this.setName('three'), this.setTime())
+      () => this.setName('three'), this.state.timeThree)
   }
 
   componentWillUnmount() {
