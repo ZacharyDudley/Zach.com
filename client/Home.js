@@ -27,26 +27,47 @@ class Home extends Component {
   }
 
   setName(whichName) {
-    let randomName = Math.floor(Math.random() * this.state.names.length)
-    let name = this.state.names[randomName]
-    while (name !== this.state.nameOne && name !== this.state.nameTwo && name !== this.state.nameThree){
-      if (whichName === 'one') {
-        let time = this.setTime()
-        this.setState({nameOne: name})
-        this.setState({timeOne: time})
-        console.log('ONE: ', this.state.nameOne, this.state.timeOne)
-      } else if (whichName === 'two') {
-        let time = this.setTime()
-        this.setState({nameTwo: name})
-        this.setState({timeTwo: time})
-        console.log('TWO: ', this.state.nameTwo, this.state.timeTwo)
-      } else if (whichName === 'three') {
-        let time = this.setTime()
-        this.setState({nameThree: name})
-        this.setState({timeThree: time})
-        console.log('THREE: ', this.state.nameThree, this.state.timeThree)
+    let hasNewName = false
+
+    while (!hasNewName) {
+      let randomName = Math.floor(Math.random() * this.state.names.length)
+      let name = this.state.names[randomName]
+
+      if (name !== this.state.nameOne && name !== this.state.nameTwo && name !== this.state.nameThree) {
+        if (whichName === 'one') {
+          let time = this.setTime()
+          this.setState({nameOne: name})
+          this.setState({timeOne: time})
+        } else if (whichName === 'two') {
+          let time = this.setTime()
+          this.setState({nameTwo: name})
+          this.setState({timeTwo: time})
+        } else if (whichName === 'three') {
+          let time = this.setTime()
+          this.setState({nameThree: name})
+          this.setState({timeThree: time})
+        }
+        hasNewName = true
       }
     }
+
+    // let randomName = Math.floor(Math.random() * this.state.names.length)
+    // let name = this.state.names[randomName]
+    // while (name !== this.state.nameOne && name !== this.state.nameTwo && name !== this.state.nameThree){
+    //   if (whichName === 'one') {
+    //     let time = this.setTime()
+    //     this.setState({nameOne: name})
+    //     this.setState({timeOne: time})
+    //   } else if (whichName === 'two') {
+    //     let time = this.setTime()
+    //     this.setState({nameTwo: name})
+    //     this.setState({timeTwo: time})
+    //   } else if (whichName === 'three') {
+    //     let time = this.setTime()
+    //     this.setState({nameThree: name})
+    //     this.setState({timeThree: time})
+    //   }
+    // }
   }
 
   setTime() {
