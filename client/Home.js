@@ -26,6 +26,20 @@ class Home extends Component {
     }
   }
 
+  nameOpacity(element, inOrOut) {
+    let nameElement = document.getElementById(element)
+    console.log(nameElement)
+
+
+    if (inOrOut === 'in') {
+      nameElement.classList.remove('fadeOut')
+      nameElement.classList.add('fadeIn')
+    } else {
+      nameElement.classList.remove('fadeIn')
+      nameElement.classList.add('fadeOut')
+    }
+  }
+
   setName(whichName) {
     let hasNewName = false
 
@@ -38,17 +52,27 @@ class Home extends Component {
           let time = this.setTime()
           this.setState({nameOne: name})
           this.setState({timeOne: time})
+          this.nameOpacity('one', 'in')
         } else if (whichName === 'two') {
           let time = this.setTime()
           this.setState({nameTwo: name})
           this.setState({timeTwo: time})
+          this.nameOpacity('two', 'in')
         } else if (whichName === 'three') {
           let time = this.setTime()
           this.setState({nameThree: name})
           this.setState({timeThree: time})
+          this.nameOpacity('three', 'in')
         }
         hasNewName = true
       }
+    }
+
+
+    const chooseAndAnimateName = () => {
+      let time = this.setTime()
+
+      window.requestAnimationFrame(chooseAndAnimateName)
     }
 
     // let randomName = Math.floor(Math.random() * this.state.names.length)
@@ -97,9 +121,9 @@ class Home extends Component {
     return (
       <div className="contentBox">
         <div className="section">
-          <h1>{this.state.nameOne}</h1>
-          <h1>{this.state.nameTwo}</h1>
-          <h1>{this.state.nameThree}</h1>
+          <h1 id="one">{this.state.nameOne}</h1>
+          <h1 id="two">{this.state.nameTwo}</h1>
+          <h1 id="three">{this.state.nameThree}</h1>
         </div>
       </div>
     )

@@ -156,6 +156,26 @@ footer {
   justify-content: center;
 }
 
+/* ANIMATION */
+@keyframes fade {
+  0% {opacity: 1}
+  25% {opacity: 0.75}
+  50% {opacity: 0.5}
+  75% {opacity: 0.25}
+  100% {opacity: 0}
+}
+
+.fadeIn {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-direction: normal;
+}
+
+.fadeOut {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-direction: reverse;
+}
 
 /* MEDIA BREAKPOINTS */
 
