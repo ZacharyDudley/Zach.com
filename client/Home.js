@@ -18,11 +18,11 @@ class Home extends Component {
         'EVERYMAN', 'GENTLEMAN'
       ],
       nameOne: 'DEVELOPER',
-      timeOne: 5000,
+      timeOne: 4000,
       nameTwo: 'DESIGNER',
-      timeTwo: 3000,
+      timeTwo: 5000,
       nameThree: 'PHILOSOPHER',
-      timeThree: 4000
+      timeThree: 2000
     }
   }
 
@@ -97,9 +97,9 @@ class Home extends Component {
     return (
       <div className="contentBox">
         <div className="section">
-          <h2>{this.state.nameOne}</h2>
-          <h2>{this.state.nameTwo}</h2>
-          <h2>{this.state.nameThree}</h2>
+          <h1>{this.state.nameOne}</h1>
+          <h1>{this.state.nameTwo}</h1>
+          <h1>{this.state.nameThree}</h1>
         </div>
       </div>
     )
