@@ -15,7 +15,7 @@ class Home extends Component {
         'GEOCENTRIST', 'BIBLIOPHILE', 'CAT FANCIER',
         'DADAIST', '\'PATAPHYSICIST', 'POSTMODERNIST',
         'CODER', 'MILLENIAL', 'ARIES',
-        'EVERYMAN', 'GENTLEMAN'
+        'EVERYMAN', 'GENTLEMAN', 'OMNIVORE'
       ],
       nameOne: 'DEVELOPER',
       timeOne: 4000,
