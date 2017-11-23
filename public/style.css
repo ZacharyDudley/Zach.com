@@ -165,13 +165,13 @@ footer {
   100% {opacity: 0}
 }
 
-.fadeIn {
+.fadeOut {
   animation-name: fade;
   animation-duration: 1s;
   animation-direction: normal;
 }
 
-.fadeOut {
+.fadeIn {
   animation-name: fade;
   animation-duration: 1s;
   animation-direction: reverse;
