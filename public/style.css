@@ -3,7 +3,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   /* display: flex;
   flex-direction: row; */
-  background-image: url("/images/LinePortrait.png");
+  /* background-image: url("/images/LinePortrait.png"); */
   background-repeat: no-repeat;
   background-position: 42vw, -41vh;
   /* background-attachment: fixed;
