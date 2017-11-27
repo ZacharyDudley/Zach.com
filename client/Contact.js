@@ -9,6 +9,9 @@ const Contact = () => {
           <p>ZacharyDFriedman@gmail.com</p>
         <h2>CALL</h2>
           <p>513.503.2307</p>
+        <h2>LINKS</h2>
+          <p><a href="https://github.com/ZacharyDudley/">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/in/zacharydfriedman/">LinkedIn</a></p>
       </div>
     </div>
   )
