@@ -20,7 +20,7 @@ const Portfolio = () => {
       </div>
 
       <div className="section">
-        <h2>Walker Talker | <small><a href="https://github.com/ZacharyDudley/walk-and-talk-2">git Repository</a></small></h2>
+        <h2>Walker Talker | <small><a href="https://github.com/ZacharyDudley/walk-and-talk-2">git repository</a></small></h2>
           <p>A walkie-talkie that streams real-time audio over the internet</p>
           <p>ROLE: Developer</p>
       </div>
