@@ -5,9 +5,12 @@ const Portfolio = () => {
   return (
     <div className="contentBox">
       <div className="section">
-        <h2>Domination | <small><a href="https://github.com/the-capstones/domination">GitHub Repository</a></small></h2>
+        <h2>Domination | <small><a href="https://domination-squad.herokuapp.com/">domination-squad.herokuapp.com</a></small></h2>
         <p>An in-browser recreation of the classic board game Risk with multiplayer (player v player) or single player (player v AI) capabilities.</p>
         <p>ROLE: Developer</p>
+        <div className="videoBox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
 
       <div className="section">
@@ -17,13 +20,13 @@ const Portfolio = () => {
       </div>
 
       <div className="section">
-        <h2>Walker Talker | <small><a href="https://github.com/ZacharyDudley/walk-and-talk-2">Git Repository</a></small></h2>
+        <h2>Walker Talker | <small><a href="https://github.com/ZacharyDudley/walk-and-talk-2">git Repository</a></small></h2>
           <p>A walkie-talkie that streams real-time audio over the internet</p>
           <p>ROLE: Developer</p>
       </div>
 
       <div className="section">
-        <h2>Zach.com | <small><a href="/">this</a></small></h2>
+        <h2>ZacharyDFriedman.herokuapp.com | <small><a href="/">here</a></small></h2>
           <p>This website</p>
           <p>ROLE: Developer</p>
       </div>
