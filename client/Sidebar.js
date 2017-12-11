@@ -2,11 +2,32 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
+  let i = 0
+
+  const changeColor = () => {
+    const sideMenu = document.getElementById('sideMenu')
+    const background = document.getElementById('mainBox')
+
+    const themes = [
+      // ['color-name', 'background', 'menu']
+      ['blue-grey', '#68B7B7', '#91C4C4'],
+      ['orange-red', '#8E5744', '#CCBFBB'],
+      ['blue', '#87CDFF', '#ADD7F6', '#3FADFC', '#2888CC']
+    ]
+
+    if (i > themes.length - 1) {
+      i = 0
+    }
+
+    background.style.backgroundColor = themes[i][1]
+    sideMenu.style.backgroundColor = themes[i][2]
+    i++
+  }
 
   return (
 
     <div id="sideMenu">
-      <div id="sideMenu-name">
+      <div id="sideMenu-name" onClick={changeColor}>
         <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
       </div>
 
