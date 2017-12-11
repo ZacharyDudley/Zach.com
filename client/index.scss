@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
 
 
-body {
-
-  // label {
-  //   display: block;
-  // }
-
-  // nav a {
-  //   display: inline-block;
-  //   margin: 1em;
-  // }
-
-}
+// body {
+//   // label {
+//   //   display: block;
+//   // }
+//   // nav a {
+//   //   display: inline-block;
+//   //   margin: 1em;
+//   // }
+// }
 
 body {
   box-sizing: border-box;
@@ -37,6 +34,30 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
+
+  &.blue {
+    background-color: rgb(68, 68, 255);
+
+    #sideMenu, .section {
+      background-color: blue;
+    }
+  }
+
+  &.red {
+    background-color: rgb(255, 103, 103);
+
+    #sideMenu, .section {
+      background-color: red;
+    }
+  }
+
+  &.grey {
+    background-color: rgb(46, 46, 46);
+
+    #sideMenu, .section {
+      background-color: rgb(129, 129, 129);
+    }
+  }
 }
 
 

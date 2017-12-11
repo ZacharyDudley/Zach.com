@@ -5,26 +5,24 @@ const Sidebar = () => {
   let i = 0
 
   const changeColor = () => {
-    const sideMenu = document.getElementById('sideMenu')
     const mainBackground = document.getElementById('mainBox')
-    const sectionBackground = document.getElementsByClassName('section')
 
     const themes = [
-      // ['color-name', 'background', 'menu']
-      ['blue-grey', '#68B7B7', '#91C4C4'],
-      ['orange-red', '#8E5744', '#CCBFBB'],
-      ['blue', '#87CDFF', '#ADD7F6', '#3FADFC', '#2888CC']
+      'blue', 'grey', 'red'
     ]
 
     if (i > themes.length - 1) {
       i = 0
     }
 
-    mainBackground.style.backgroundColor = themes[i][1]
-    sideMenu.style.backgroundColor = themes[i][2]
-    Array.prototype.filter.call(sectionBackground, element => {
-      element.style.backgroundColor = themes[i][2]
-    })
+    mainBackground.classList.remove(...themes)
+    mainBackground.classList.add(themes[i])
+
+    // mainBackground.style.backgroundColor = themes[i][1]
+    // sideMenu.style.backgroundColor = themes[i][2]
+    // Array.prototype.filter.call(sectionBackground, element => {
+    //   element.style.backgroundColor = themes[i][2]
+    // })
 
   // sectionBackground.style.backgroundColor = themes[i][2]
     i++
