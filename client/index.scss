@@ -25,15 +25,6 @@ body {
   a {
     text-decoration: none;
   }
-}
-
-#mainBox {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
 
   &.blue {
     background-color: rgb(68, 68, 255);
@@ -58,6 +49,15 @@ body {
       background-color: rgb(129, 129, 129);
     }
   }
+}
+
+#mainBox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 
