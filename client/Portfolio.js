@@ -10,7 +10,7 @@ const Portfolio = () => {
         <p>ROLE: Developer</p>
 {
         //   <div className="videoBox">
-        // <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        // <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
         // </div>
 }
       </div>
