@@ -15,8 +15,8 @@ const Sidebar = () => {
       i = 0
     }
 
-    body.classList.remove(...themes)
-    body.classList.add(themes[i])
+    // body.classList.remove(...themes)
+    // body.classList.add(themes[i])
     i++
   }
 

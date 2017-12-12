@@ -228,40 +228,72 @@ footer {
     margin: 0;
     margin-right: 0.5rem;
   }
+
   #sideMenu-nav {
     flex-direction: row;
     justify-content: space-evenly;
+
+    a {
+      padding: 0vh;
+      align-self: flex-start;
+    }
+
+    .active {
+      font-size: 4.5vw;
+      color: white;
+      text-shadow:
+      #000000 0px 0px 1px,
+      #000000 0px 0px 1px,
+      #000000 0px 0px 1px,
+      #000000 0px 0px 1px,
+      #000000 0px 0px 1px,
+      #000000 0px 0px 1px,
+      #000000 0px 0px 3px,
+      #000000 0px 0px 7px,
+      #000000 0px 0px 10px;
+    }
   }
-  #sideMenu-nav a {
-    padding: 0vh;
-    align-self: flex-start;
-  }
-  #sideMenu-nav .active {
-    font-size: 4.5vh;
-  }
+
   #sideMenu-name {
     padding: 0;
-  }
-  #sideMenu-name p {
-    font-size: 5vh;
-    text-align: center;
-  }
-  #sideMenu-name span {
-    position: relative;
-  }
-  #sideMenu-name span:after {
-    content: 'UDLEY';
-    transition: 0s;
-    position: relative;
-    opacity: 1;
+
+    p {
+      font-size: 5vh;
+      text-align: center;
+    }
+
+    span {
+      position: relative;
+    }
+
+    span:after {
+      content: 'UDLEY';
+      transition: 0s;
+      position: relative;
+      opacity: 1;
+    }
   }
 
   .contentBox {
     margin-right: 0.5rem;
+
+    h1 {
+      font-size: 9.5vw;
+    }
   }
+
   .section {
     margin: 0;
     margin-top: 0.5rem;
+
+    p {
+      margin-right: 1.5em;
+      font-size: 4.5vw;
+    }
+
+    h2 {
+      overflow-wrap: break-word;
+    }
   }
 }
 
