@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './index.scss'
+
 
 class Home extends Component {
   constructor(){
@@ -12,10 +14,11 @@ class Home extends Component {
         'GUITARIST', 'READER', 'OHIOAN',
         'DREAMER', 'FRIEND', 'CITIZEN',
         'MATERIALIST', 'IDEALIST', 'HUMAN',
-        'GEOCENTRIST', 'BIBLIOPHILE', 'CAT FANCIER',
+        'BACHELOR', 'BIBLIOPHILE', 'CAT FANCIER',
         'DADAIST', '\'PATAPHYSICIST', 'POSTMODERNIST',
         'CODER', 'MILLENIAL', 'ARIES',
-        'EVERYMAN', 'GENTLEMAN', 'OMNIVORE'
+        'EVERYMAN', 'GENTLEMAN', 'OMNIVORE',
+        'ALUMNUS'
       ],
       nameOne: 'DEVELOPER',
       timeOne: 4000,

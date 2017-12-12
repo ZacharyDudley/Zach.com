@@ -15,17 +15,20 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader'
       },
       {
-        test: /.jsx$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      }
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
     ]
   },
 };
