@@ -16,11 +16,12 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   /* display: flex;
   flex-direction: row; */
-  /* background-image: url("/images/LinePortrait.png"); */
+  // background-position: 61vw, -41vh;
+  // background-attachment: fixed;
+  background-image: url("/images/Portrait30.png");
   background-repeat: no-repeat;
-  background-position: 42vw, -41vh;
-  /* background-attachment: fixed;
-  background-size: cover; */
+  background-position: 57vh, -47vh;
+  background-size: cover;
 
   a {
     text-decoration: none;
@@ -30,7 +31,7 @@ body {
     background-color: rgb(68, 68, 255);
 
     #sideMenu, .section {
-      background-color: blue;
+      background-color: rgba(0, 0, 255, 0.281);
     }
   }
 
@@ -50,6 +51,7 @@ body {
     }
   }
 }
+
 
 #mainBox {
   width: 100vw;
@@ -138,6 +140,19 @@ body {
   .active {
     text-transform: uppercase;
     font-size: 4vh;
+
+    color: white;
+    text-shadow:
+    #000000 0px 0px 1px,
+    #000000 0px 0px 1px,
+    #000000 0px 0px 1px,
+    #000000 0px 0px 1px,
+    #000000 0px 0px 1px,
+    #000000 0px 0px 1px,
+    #000000 0px 0px 3px,
+    #000000 0px 0px 7px,
+    #000000 0px 0px 10px;
+
   }
 }
 
@@ -216,8 +231,26 @@ footer {
 
 
 /* MEDIA BREAKPOINTS */
+@media screen
+  and (max-width: 850px) {
+    body {
 
-@media screen and (max-width: 480px) {
+    }
+
+    .contentBox {
+      h1 {
+        font-size: 4.5vw;
+      }
+    }
+
+}
+
+@media screen
+  and (max-width: 480px) {
+  body {
+    background-image: none;
+  }
+
   #mainBox {
     flex-direction: column;
   }
@@ -236,21 +269,7 @@ footer {
     a {
       padding: 0vh;
       align-self: flex-start;
-    }
-
-    .active {
-      font-size: 4.5vw;
-      color: white;
-      text-shadow:
-      #000000 0px 0px 1px,
-      #000000 0px 0px 1px,
-      #000000 0px 0px 1px,
-      #000000 0px 0px 1px,
-      #000000 0px 0px 1px,
-      #000000 0px 0px 1px,
-      #000000 0px 0px 3px,
-      #000000 0px 0px 7px,
-      #000000 0px 0px 10px;
+      font-size: 2.5vh;
     }
   }
 
@@ -296,8 +315,3 @@ footer {
     }
   }
 }
-
-@media screen and (max-width: 390px) {
-
-}
-
