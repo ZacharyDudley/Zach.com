@@ -16,11 +16,12 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   /* display: flex;
   flex-direction: row; */
-  /* background-image: url("/images/LinePortrait.png"); */
+  // background-position: 61vw, -41vh;
+  // background-attachment: fixed;
+  background-image: url("/images/Portrait40.png");
   background-repeat: no-repeat;
-  background-position: 42vw, -41vh;
-  /* background-attachment: fixed;
-  background-size: cover; */
+  background-position: 57vh, -47vh;
+  background-size: cover;
 
   a {
     text-decoration: none;
@@ -30,7 +31,7 @@ body {
     background-color: rgb(68, 68, 255);
 
     #sideMenu, .section {
-      background-color: blue;
+      background-color: rgba(0, 0, 255, 0.281);
     }
   }
 
@@ -50,6 +51,7 @@ body {
     }
   }
 }
+
 
 #mainBox {
   width: 100vw;
@@ -216,8 +218,17 @@ footer {
 
 
 /* MEDIA BREAKPOINTS */
+@media screen
+  and (max-width: 415px) {
 
-@media screen and (max-width: 480px) {
+}
+
+@media screen
+  and (max-width: 480px) {
+  body {
+    background-image: none;
+  }
+
   #mainBox {
     flex-direction: column;
   }
@@ -297,7 +308,13 @@ footer {
   }
 }
 
-@media screen and (max-width: 390px) {
+@media only screen
+  and (max-width: 850) {
+  body {
+    background-image: none;
+  }
 
+  .contentBox h1 {
+    font-size: 4.5vw;
+  }
 }
-
