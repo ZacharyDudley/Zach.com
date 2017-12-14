@@ -1,0 +1,16 @@
+{
+  "short_name": "ZDF",
+  "name": "Zachary Dudley Friedman",
+  "description": "All Zach, All the Time",
+  "start_url": ".",
+  "background_color": "",
+  "theme_color": "",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "public/z.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
