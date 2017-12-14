@@ -8,11 +8,11 @@ const Portfolio = () => {
         <h2>Domination | <small><a href="https://domination-squad.herokuapp.com/">domination-squad.herokuapp.com</a></small></h2>
         <p>An in-browser recreation of the classic board game Risk with multiplayer (player v player) or single player (player v AI) capabilities.</p>
         <p>ROLE: Developer</p>
-{
-        //   <div className="videoBox">
-        // <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
-        // </div>
-}
+
+        <div className="videoBox">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
+        </div>
+
       </div>
 
       <div className="section">
