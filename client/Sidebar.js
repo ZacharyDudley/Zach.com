@@ -8,22 +8,28 @@ const Sidebar = () => {
     const body = document.getElementsByTagName('body')[0]
 
     const themes = [
-      'blue', 'grey', 'red'
+      'ocean', 'dark-blue', 'purple', 'wine', 'beige'
     ]
 
     if (i > themes.length - 1) {
       i = 0
     }
 
-    // body.classList.remove(...themes)
-    // body.classList.add(themes[i])
+    body.classList.remove(...themes)
+    body.classList.add(themes[i])
     i++
   }
+
+  window.addEventListener('keydown', event => {
+    if (event.key === 'z') {
+      changeColor()
+    }
+  })
 
   return (
 
     <div id="sideMenu">
-      <div id="sideMenu-name" onClick={changeColor}>
+      <div id="sideMenu-name">
         <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
       </div>
 
