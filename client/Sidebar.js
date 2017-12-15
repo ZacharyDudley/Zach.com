@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   window.addEventListener('keydown', event => {
     if (event.key === 'z') {
-      changeColor()
+      // changeColor()
     }
   })
 
