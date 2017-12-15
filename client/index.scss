@@ -27,27 +27,138 @@ body {
     text-decoration: none;
   }
 
-  &.blue {
-    background-color: rgb(68, 68, 255);
+  &.ocean {
+    /*
+    EAF5F9 - white
+    0089BF - sky blue
+    05668D - darker blue
+    4185A0 - lighter green
+    357993 - darker green
+     */
+    background-color: #05668D;
+
+    p, a, h1, h2, h3 {
+      color: #EAF5F9
+    }
 
     #sideMenu, .section {
-      background-color: rgba(0, 0, 255, 0.281);
+      background-color: rgba(65, 133, 160, 0.5);
+
+      a {
+        color: #EAF5F9
+      }
+
+      .active {
+        color: #4185A0
+      }
     }
   }
 
-  &.red {
-    background-color: rgb(255, 103, 103);
+  &.dark-blue {
+    /*
+    001011 - black
+    09393D - dark green
+    39B1BA - mid blue
+    63E3ED - light blue
+    96E4EA - blue grey
+    */
+    background-color: #96E4EA;
+
+    p, a, h1, h2, h3 {
+      color: #001011
+    }
 
     #sideMenu, .section {
-      background-color: red;
+      background-color: rgba(57, 177, 186, 0.5);
+
+      a {
+        color: #001011
+      }
+
+      .active {
+        color: #63E3ED
+      }
     }
   }
 
-  &.grey {
-    background-color: rgb(46, 46, 46);
+  &.purple {
+    /*
+    0D0630 - deep purple
+    20174F - darker purple
+    423877 - mid purple
+    948BBF - purple grey
+    BBAEF9 - light pinkish
+    */
+    background-color: #423877;
+
+    p, a, h1, h2, h3 {
+      color: #0D0630
+    }
 
     #sideMenu, .section {
-      background-color: rgb(129, 129, 129);
+      background-color: rgba(148, 139, 191, 0.5);
+
+      a {
+        color: #0D0630
+      }
+
+      .active {
+        color: #BBAEF9
+      }
+    }
+  }
+
+  &.wine {
+    /*
+    260C1A - deep wine red
+    422D38 - purple red
+    5E4150 - mid purple red
+    AF879D - pink
+    EDC0D8 - light pink
+    */
+    background-color: #AF879D;
+
+    p, a, h1, h2, h3 {
+      color: #260C1A
+    }
+
+    #sideMenu, .section {
+      background-color: rgba(66, 45, 56, 0.5);
+
+      a {
+        color: #260C1A
+      }
+
+      .active {
+        color: #EDC0D8
+      }
+    }
+  }
+
+  &.beige {
+    /*
+    493B2A - deep brown
+    60513E - khaki
+    8C7D6B - light khaki
+    AF9C83 - tan
+    D3BEA5 - my flesh
+    */
+    background-color: #60513E;
+
+    p, a, h1, h2, h3 {
+      color: #493B2A
+    }
+
+    #sideMenu, .section {
+      background-color: rgba(140, 125, 107, 0.5);
+
+      a {
+        color: #493B2A
+      }
+
+      .active {
+        color: #D3BEA5
+      }
     }
   }
 }
