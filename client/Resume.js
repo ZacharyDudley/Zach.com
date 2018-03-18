@@ -7,11 +7,11 @@ const Resume = () => {
       <div className="section">
         <h2>SKILLS</h2>
           <h3>Proficient:</h3>
-            <p>JavaScript, Node, React, Redux, HTML, CSS, Express, Git, Agile, Scrum, Unity3D</p>
+            <p>JavaScript, Node, HTML, CSS, React, Redux, Agile, Git, Unity3D</p>
           <h3>Knowledgable:</h3>
-            <p>Socket.io, Websocket, PostgreSQL, Firebase, SQL, Webpack, C#, Adobe CS, Blender, GIMP, Inkscape, Pro Tools</p>
+            <p>Express, Socket.io, Websocket, React Native, PostgreSQL, SQL, Firebase, Webpack, C#, Adobe CS, Blender, Inkscape, Pro Tools</p>
           <h3>Some experience:</h3>
-            <p>Sass, Bootstrap, Bluebird, Jasmine, Mocha, Chai, jQuery, Ruby, Lua</p>
+            <p>Sass, Bootstrap, Bluebird, Jasmine, Mocha, Chai, jQuery, Heroku, Lua, Ruby, Xcode</p>
       </div>
 
       <div className="section">
