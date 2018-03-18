@@ -5,6 +5,12 @@ const Portfolio = () => {
   return (
     <div className="contentBox">
       <div className="section">
+        <h2>Tetris | <small><a href="https://github.com/ZacharyDudley/tetris-app">git repository</a></small></h2>
+        <p>A tetris game built for mobile.</p>
+        <p>ROLE: Developer</p>
+      </div>
+
+      <div className="section">
         <h2>ChessBall | <small><a href="https://github.com/ZacharyDudley/chessball">git repository</a></small></h2>
         <p>A two player turn-based game combining mechanics of Chess and Soccer.</p>
         <p>ROLE: Developer</p>
