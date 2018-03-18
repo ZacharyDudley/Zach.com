@@ -326,6 +326,20 @@ body {
 
 }
 
+.pictureBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0.5rem;
+
+  img {
+    height: 200px;
+  }
+}
+
 .videoBox {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -366,7 +380,7 @@ footer {
 }
 
 @media screen
-  and (max-width: 480px) {
+  and (max-width: 600px) {
   body {
     background-image: none;
   }
