@@ -40,7 +40,6 @@ const Resume = () => {
               <h4>2011</h4>
               <p>Worked with a team to test pre-release consumer software</p>
           </div>
-
       </div>
 
       <div className="section">
