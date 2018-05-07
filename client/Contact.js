@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="contentBox">
       <div className="section">
         <h2>EMAIL</h2>
-          <p>ZacharyDFriedman@gmail.com</p>
+          <p>Zachary@ZacharyDFriedman.com</p>
         <h2>CALL</h2>
           <p>513.503.2307</p>
         <h2>LINKS</h2>
