@@ -6,12 +6,16 @@ const Contact = () => {
     <div className="contentBox">
       <div className="section">
         <div className="contact-item">
-          <i className="fas fa-envelope-square fa-4x" />
+          <a href="mailto:zachary@zacharydfriedman.com">
+            <i className="fas fa-envelope-square fa-4x" />
+          </a>
           <p>Zachary@ZacharyDFriedman.com</p>
         </div>
 
         <div className="contact-item">
-          <i className="fas fa-phone-square fa-4x" />
+          <a href="tel:15135032307">
+            <i className="fas fa-phone-square fa-4x" />
+          </a>
           <p>513.503.2307</p>
         </div>
 
