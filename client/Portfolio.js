@@ -64,7 +64,7 @@ const Portfolio = () => {
       </div>
 
       <div className="section">
-        <h2>ZacharyDFriedman.herokuapp.com | <small><a href="/">here</a></small></h2>
+        <h2>ZacharyDFriedman.com | <small><a href="/">here</a></small></h2>
           <p>This website</p>
           <p>ROLE: Creator</p>
       </div>
