@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   let i = 0
 
   const changeColor = () => {
@@ -26,8 +26,11 @@ const Sidebar = () => {
     }
   })
 
-  return (
+  const downloadResumePdf = () => {
+    window.open('Resume-ZachFriedman.pdf')
+  }
 
+  return (
     <div id="sideMenu">
       <div id="sideMenu-name">
         <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
@@ -38,6 +41,9 @@ const Sidebar = () => {
         <NavLink to="/portfolio">PORTFOLIO</NavLink>
         <NavLink to="/blog">BLOG</NavLink>
         <NavLink to="/resume">RE&#769;SUME&#769;</NavLink>
+        {
+          props.location.pathname === '/resume' && <button type="submit" onClick={downloadResumePdf}>View .pdf</button>
+        }
         <NavLink to="/contact">CONTACT</NavLink>
       </div>
       </div>
