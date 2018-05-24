@@ -18,7 +18,7 @@ class Home extends Component {
         'DADAIST', '\'PATAPHYSICIST', 'POSTMODERNIST',
         'CODER', 'MILLENIAL', 'ARIES',
         'EVERYMAN', 'GENTLEMAN', 'OMNIVORE',
-        'ALUMNUS'
+        'ALUMNUS', 'CREATOR', 'TEAMMATE'
       ],
       nameOne: 'DEVELOPER',
       timeOne: 4000,
