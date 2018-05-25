@@ -265,6 +265,10 @@ body {
     #000000 0px 0px 10px;
 
   }
+
+  &sub {
+    font-size: 2vh;
+  }
 }
 
 
@@ -425,6 +429,10 @@ footer {
       align-self: flex-start;
       font-size: 2.5vh;
     }
+  }
+
+  .sideMenu-sub {
+    display: none;
   }
 
   #sideMenu-name {
