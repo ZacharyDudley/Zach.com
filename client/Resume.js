@@ -7,22 +7,28 @@ const Resume = () => {
         <h2>SKILLS</h2>
           <div className="section-item">
             <h3>Proficient:</h3>
-              <p>JavaScript, Node, React, Redux, HTML, CSS, Git, Agile, Unity3D</p>
+              <p>JavaScript, Node, React, Redux, HTML, CSS, Sass, Git, Agile, Unity3D</p>
           </div>
 
           <div className="section-item">
             <h3>Knowledgable:</h3>
-              <p>Express, Socket.io, Websocket, React Native, Webpack, Jest, Jasmine, PostgreSQL, SQL, Firebase, C#, Adobe Creative Suite, Blender, Inkscape, Pro Tools</p>
+              <p>Express, Socket.io, Websocket, React Native, Webpack, Gulp, Jest, Jasmine, PostgreSQL, SQL, Firebase, C#, Adobe Creative Suite, Adobe Experience Manager, Blender, Inkscape, Pro Tools</p>
           </div>
 
           <div className="section-item">
             <h3>Some experience:</h3>
-              <p>Sass, Bootstrap, Bluebird, Mocha, Chai, jQuery, Heroku, Lua, Ruby, Xcode</p>
+              <p>Bootstrap, Bluebird, Mocha, Chai, jQuery, Heroku, Lua, Ruby, Xcode</p>
           </div>
       </div>
 
       <div className="section">
         <h2>EXPERIENCE</h2>
+          <div className="section-item">
+            <h3>Front End Developer | <small>Hyatt Hotels Corporation</small></h3>
+              <h4>2018</h4>
+              <p>Creating and optimising front end assets</p>
+          </div>
+
           <div className="section-item">
             <h3>Freelance Developer | <small>Team ETHERNAUTS</small></h3>
               <h4>2018</h4>
