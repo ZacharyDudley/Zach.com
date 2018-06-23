@@ -39,7 +39,9 @@ const Sidebar = (props) => {
       <div id="sideMenu-nav">
         <NavLink exact to="/">HOME</NavLink>
         <NavLink to="/portfolio">PORTFOLIO</NavLink>
-        <NavLink to="/blog">BLOG</NavLink>
+        {
+          // <NavLink to="/blog">BLOG</NavLink>
+        }
         <NavLink to="/resume">RE&#769;SUME&#769;</NavLink>
         {
           props.location.pathname === '/resume' &&
