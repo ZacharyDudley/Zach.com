@@ -5,6 +5,16 @@ const Portfolio = () => {
   return (
     <div className="contentBox">
       <div className="section">
+        <h2>Extension Command | <small><a href="https://github.com/ZacharyDudley/ChromeExtensionManager">git repository</a></small></h2>
+        <p>Work-In-Progress: A Chrome extension for managing Chrome extensions.</p>
+        <p>ROLE: Developer</p>
+
+        <div className="pictureBox">
+          <img src="/screenShots/extension/extensionCommand.png" alt="Management Window" />
+        </div>
+      </div>
+
+      <div className="section">
         <h2>Tetris | <small><a href="https://github.com/ZacharyDudley/tetris-app">git repository</a></small></h2>
         <p>A tetris game built for mobile.</p>
         <p>ROLE: Developer</p>
@@ -17,7 +27,6 @@ const Portfolio = () => {
           <img src="/screenShots/tetris/tetrisContinue.png" alt="Saved game" />
           <img src="/screenShots/tetris/tetrisCredits.png" alt="Credits" />
         </div>
-
       </div>
 
       <div className="section">
@@ -41,7 +50,6 @@ const Portfolio = () => {
         <div className="videoBox">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/51-RLBMWXgQ?rel=0" frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
         </div>
-
       </div>
 
       <div className="section">
@@ -54,7 +62,6 @@ const Portfolio = () => {
             <img src="/screenShots/bento/bentoCollar.png" alt="Product page" />
             <img src="/screenShots/bento/bentoCart.png" alt="Cart" />
         </div>
-
       </div>
 
       <div className="section">
