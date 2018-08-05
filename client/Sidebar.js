@@ -2,29 +2,29 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Sidebar = (props) => {
-  let i = 0
+  // let i = 0
 
-  const changeColor = () => {
-    const body = document.getElementsByTagName('body')[0]
+  // const changeColor = () => {
+  //   const body = document.getElementsByTagName('body')[0]
 
-    const themes = [
-      'ocean', 'dark-blue', 'purple', 'wine', 'beige'
-    ]
+  //   const themes = [
+  //     'ocean', 'dark-blue', 'purple', 'wine', 'beige'
+  //   ]
 
-    if (i > themes.length - 1) {
-      i = 0
-    }
+  //   if (i > themes.length - 1) {
+  //     i = 0
+  //   }
 
-    body.classList.remove(...themes)
-    body.classList.add(themes[i])
-    i++
-  }
+  //   body.classList.remove(...themes)
+  //   body.classList.add(themes[i])
+  //   i++
+  // }
 
-  window.addEventListener('keydown', event => {
-    if (event.key === 'z') {
-      // changeColor()
-    }
-  })
+  // window.addEventListener('keydown', event => {
+  //   if (event.key === 'z') {
+  //     // changeColor()
+  //   }
+  // })
 
   const downloadResumePdf = () => {
     window.open('Resume-ZachFriedman.pdf')
@@ -49,8 +49,7 @@ const Sidebar = (props) => {
         }
         <NavLink to="/contact">CONTACT</NavLink>
       </div>
-      </div>
-
+    </div>
   )
 }
 

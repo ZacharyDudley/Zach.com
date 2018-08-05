@@ -4,7 +4,7 @@ const Main = props => {
   const { children } = props
 
   return (
-    <div id="mainBox">
+    <div id="page-grid">
       {children}
     </div>
   )

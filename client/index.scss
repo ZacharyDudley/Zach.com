@@ -1,344 +1,479 @@
+@import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
-
-
-// body {
-//   // label {
-//   //   display: block;
-//   // }
-//   // nav a {
-//   //   display: inline-block;
-//   //   margin: 1em;
-//   // }
-// }
 
 body {
   box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
-  /* display: flex;
-  flex-direction: row; */
-  // background-position: 61vw, -41vh;
-  // background-attachment: fixed;
-  background-image: url("/images/Portrait30.png");
-  background-repeat: no-repeat;
-  background-position: 57vh, -47vh;
-  background-size: cover;
+  margin: 0;
+  // font-size: calc($font-size-min + ($fs-max - $fs-min) * ((100vw - $screen-sm) / ($screen-max - $screen-min)));
+  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1280 - 320)));
 
   a {
     text-decoration: none;
   }
 }
 
-
-#mainBox {
-  width: 100vw;
+#main {
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
 }
 
-
-/* SIDEBAR MENU */
+#page-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns:
+    [cpage-start c1-start] 1fr
+    [c1-end c2-start] 1fr
+    [c2-end c3-start] 1fr
+    [c3-end c4-start] 1fr
+    [c4-end c5-start] 1fr
+    [c5-end c6-start] 1fr
+    [c6-end cpage-end];
+  grid-template-rows:
+    [rpage-start r1-start] 1fr
+    [r1-end r2-start] 1fr
+    [r2-end r3-start] 1fr
+    [r3-end r4-start] 1fr
+    [r4-end r5-start] 1fr
+    [r5-end r6-start] 1fr
+    [r6-end rpage-end];
+  grid-gap: 15px;
+}
 
 #sideMenu {
+  background-color: aquamarine;
   display: flex;
-  flex-direction: column;
-  background-color: #ababab;
-  border: 0.5rem solid black;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  margin-bottom: 1.5rem;
 }
-
-
-/* SIDEBAR NAME */
 
 #sideMenu-name {
-  cursor: pointer;
-  transition: all 0.5s;
-  flex: 0 1 10%;
+  background-color: darkcyan;
+  flex-basis: 45%;
+  // cursor: pointer;
+  // transition: all 0.5s;
+  // flex: 0 1 10%;
 
-  p {
-    text-align: left;
-    font-size: 6vh;
-    line-height: 1;
-  }
+  // p {
+  //   text-align: left;
+  //   font-size: 6vh;
+  //   line-height: 1;
+  // }
 
-  span {
-    cursor: pointer;
-    transition: 0.5s;
-    position: relative;
-  }
+  // span {
+  //   cursor: pointer;
+  //   transition: 0.5s;
+  //   position: relative;
+  // }
 
-  span:after {
-    content: 'UDLEY';
-    transition: 0.5s;
-    position: absolute;
-    opacity: 0;
-  }
+  // span:after {
+  //   content: 'UDLEY';
+  //   transition: 0.5s;
+  //   position: absolute;
+  //   opacity: 0;
+  // }
+
+  // &:hover span:after {
+  //   opacity: 1;
+  // }
 }
-
-#sideMenu-name:hover span:after {
-  opacity: 1;
-}
-
-
-/* SIDEBAR LINKS */
 
 #sideMenu-nav {
+  background-color: darkcyan;
+  flex-basis: 45%;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 10px 15px;
 
   a {
     align-self: flex-end;
-    color: black;
+    color: $color-font;
     text-transform: lowercase;
-    font-size: 3vh;
-    padding: 3vh;
-  }
 
-  a:hover {
-    color: white;
-    text-shadow:
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 3px,
-    #000000 0px 0px 7px,
-    #000000 0px 0px 10px;
-  }
+    &:hover {
+      color: white;
+    }
 
-  .active {
-    text-transform: uppercase;
-    font-size: 4vh;
-
-    color: white;
-    text-shadow:
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 3px,
-    #000000 0px 0px 7px,
-    #000000 0px 0px 10px;
-
-  }
-
-  &sub {
-    font-size: 2vh;
+    &.active {
+      text-transform: uppercase;
+      color: $color-highlight;
+    }
   }
 }
-
-
-/* MAIN BODY */
-
-#root {
-  display: flex;
-  flex: 1 1 75%
-}
-
-/* PAGES */
 
 .contentBox {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-
-  h1 {
-  font-size: 3rem;
-  }
-}
-
-.section {
-  border: 0.5rem solid black;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0.5rem;
-
-  p {
-    margin-left: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    margin-left: 2em;
-  }
-
-  h4 {
-    margin-left: 3em;
-  }
-
-  a {
-    color: black;
-  }
-
-  a:hover {
-    color: white;
-    text-shadow:
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 1px,
-    #000000 0px 0px 3px,
-    #000000 0px 0px 7px,
-    #000000 0px 0px 10px;
-  }
-
-  .section-item {
-    padding-bottom: 0.2em;
-
-    h3 {
-      margin-left: 1em;
-    }
-
-    h4 {
-      margin-left: 3em;
-    }
-  }
-}
-
-.pictureBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 0.5rem;
-
-  img {
-    height: 200px;
-  }
-}
-
-.videoBox {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin-bottom: 1rem;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-}
-
-/* FOOTER */
-
-footer {
-  display: flex;
-  justify-content: center;
+  background-color: aquamarine;
 }
 
 
-/* MEDIA BREAKPOINTS */
-@media screen
-  and (max-width: 850px) {
-    body {
+/*
+  *
+  * MEDIA
+  * 0 to 768
+  * MEDIA
+  *
+*/
 
-    }
-
-    .contentBox {
-      h1 {
-        font-size: 4.5vw;
-      }
-    }
-
-}
-
-@media screen
-  and (max-width: 600px) {
-  body {
-    background-image: none;
-  }
-
-  #mainBox {
-    flex-direction: column;
-  }
-
+@media (max-width: $screen-md) {
   #sideMenu {
-    display: inline-block;
-    padding: 0rem;
-    margin: 0;
-    margin-right: 0.5rem;
+    grid-column: cpage-start / cpage-end;
+    grid-row: r5-start / r6-end;
+
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
+    padding: 10px 15px;
+
   }
+
 
   #sideMenu-nav {
-    flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-end;
 
     a {
-      padding: 0vh;
-      align-self: flex-start;
-      font-size: 2.5vh;
-    }
-  }
-
-  .sideMenu-sub {
-    display: none;
-  }
-
-  #sideMenu-name {
-    padding: 0;
-
-    p {
-      font-size: 5vh;
-      text-align: center;
-    }
-
-    span {
-      position: relative;
-    }
-
-    span:after {
-      content: 'UDLEY';
-      transition: 0s;
-      position: relative;
-      opacity: 1;
+      padding: 0;
     }
   }
 
   .contentBox {
-    margin-right: 0.5rem;
+    grid-column: cpage-start / cpage-end;
+    grid-row: rpage-start / r4-end;
 
-    h1 {
-      font-size: 9.5vw;
-    }
+    padding: 10px 15px;
   }
 
-  .section {
-    margin: 0;
-    margin-top: 0.5rem;
-
-    p {
-      margin-right: 1.5em;
-      font-size: 4.5vw;
-    }
-
-    h2 {
-      overflow-wrap: break-word;
-    }
-  }
 }
+
+// .contentBox {
+//   display: none;
+// }
+
+// body {
+//   box-sizing: border-box;
+//   font-family: 'Josefin Sans', sans-serif;
+//   /* display: flex;
+//   flex-direction: row; */
+//   // background-position: 61vw, -41vh;
+//   // background-attachment: fixed;
+//   background-image: url("/images/Portrait30.png");
+//   background-repeat: no-repeat;
+//   background-position: 57vh, -47vh;
+//   background-size: cover;
+
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+
+// #mainBox {
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: nowrap;
+//   justify-content: flex-start;
+// }
+
+
+/* SIDEBAR MENU */
+
+// #sideMenu {
+//   display: flex;
+//   flex-direction: column;
+//   background-color: #ababab;
+//   border: 0.5rem solid black;
+//   padding: 0.5rem;
+//   margin: 0.5rem;
+//   margin-bottom: 1.5rem;
+// }
+
+
+/* SIDEBAR NAME */
+
+// #sideMenu-name {
+//   cursor: pointer;
+//   transition: all 0.5s;
+//   flex: 0 1 10%;
+
+//   p {
+//     text-align: left;
+//     font-size: 6vh;
+//     line-height: 1;
+//   }
+
+//   span {
+//     cursor: pointer;
+//     transition: 0.5s;
+//     position: relative;
+//   }
+
+//   span:after {
+//     content: 'UDLEY';
+//     transition: 0.5s;
+//     position: absolute;
+//     opacity: 0;
+//   }
+// }
+
+// #sideMenu-name:hover span:after {
+//   opacity: 1;
+// }
+
+
+/* SIDEBAR LINKS */
+
+// #sideMenu-nav {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+
+//   a {
+//     align-self: flex-end;
+//     color: black;
+//     text-transform: lowercase;
+//     font-size: 3vh;
+//     padding: 3vh;
+//   }
+
+//   a:hover {
+//     color: white;
+//     text-shadow:
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 3px,
+//     #000000 0px 0px 7px,
+//     #000000 0px 0px 10px;
+//   }
+
+//   .active {
+//     text-transform: uppercase;
+//     font-size: 4vh;
+
+//     color: white;
+//     text-shadow:
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 3px,
+//     #000000 0px 0px 7px,
+//     #000000 0px 0px 10px;
+
+//   }
+
+//   &sub {
+//     font-size: 2vh;
+//   }
+// }
+
+
+/* MAIN BODY */
+
+// #root {
+//   display: flex;
+//   flex: 1 1 75%
+// }
+
+/* PAGES */
+
+// .contentBox {
+//   flex: 1 1 auto;
+//   overflow-y: auto;
+//   margin-right: 1rem;
+//   margin-bottom: 1rem;
+
+//   h1 {
+//   font-size: 3rem;
+//   }
+// }
+
+// .section {
+//   border: 0.5rem solid black;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   margin: 0.5rem;
+
+//   p {
+//     margin-left: 1.5em;
+//   }
+
+//   h2 {
+//     font-size: 1.5rem;
+//   }
+
+//   h3 {
+//     margin-left: 2em;
+//   }
+
+//   h4 {
+//     margin-left: 3em;
+//   }
+
+//   a {
+//     color: black;
+//   }
+
+//   a:hover {
+//     color: white;
+//     text-shadow:
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 1px,
+//     #000000 0px 0px 3px,
+//     #000000 0px 0px 7px,
+//     #000000 0px 0px 10px;
+//   }
+
+//   .section-item {
+//     padding-bottom: 0.2em;
+
+//     h3 {
+//       margin-left: 1em;
+//     }
+
+//     h4 {
+//       margin-left: 3em;
+//     }
+//   }
+// }
+
+// .pictureBox {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+//   margin: 0.5rem;
+
+//   img {
+//     height: 200px;
+//   }
+// }
+
+// .videoBox {
+//   position: relative;
+//   padding-bottom: 56.25%; /* 16:9 */
+//   padding-top: 25px;
+//   height: 0;
+//   margin-bottom: 1rem;
+
+//   iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+// .contact-item {
+//   display: flex;
+//   align-items: center;
+// }
+
+// /* FOOTER */
+
+// footer {
+//   display: flex;
+//   justify-content: center;
+// }
+
+
+// /* MEDIA BREAKPOINTS */
+// @media screen
+//   and (max-width: 850px) {
+//     body {
+
+//     }
+
+//     .contentBox {
+//       h1 {
+//         font-size: 4.5vw;
+//       }
+//     }
+
+// }
+
+// @media screen
+//   and (max-width: 600px) {
+//   body {
+//     background-image: none;
+//   }
+
+//   #mainBox {
+//     flex-direction: column;
+//   }
+
+//   #sideMenu {
+//     display: inline-block;
+//     padding: 0rem;
+//     margin: 0;
+//     margin-right: 0.5rem;
+//   }
+
+//   #sideMenu-nav {
+//     flex-direction: row;
+//     justify-content: space-evenly;
+
+//     a {
+//       padding: 0vh;
+//       align-self: flex-start;
+//       font-size: 2.5vh;
+//     }
+//   }
+
+//   .sideMenu-sub {
+//     display: none;
+//   }
+
+//   #sideMenu-name {
+//     padding: 0;
+
+//     p {
+//       font-size: 5vh;
+//       text-align: center;
+//     }
+
+//     span {
+//       position: relative;
+//     }
+
+//     span:after {
+//       content: 'UDLEY';
+//       transition: 0s;
+//       position: relative;
+//       opacity: 1;
+//     }
+//   }
+
+//   .contentBox {
+//     margin-right: 0.5rem;
+
+//     h1 {
+//       font-size: 9.5vw;
+//     }
+//   }
+
+//   .section {
+//     margin: 0;
+//     margin-top: 0.5rem;
+
+//     p {
+//       margin-right: 1.5em;
+//       font-size: 4.5vw;
+//     }
+
+//     h2 {
+//       overflow-wrap: break-word;
+//     }
+//   }
+// }
