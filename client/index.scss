@@ -6,6 +6,7 @@ body {
   margin: 0;
   // font-size: calc($font-size-min + ($fs-max - $fs-min) * ((100vw - $screen-sm) / ($screen-max - $screen-min)));
   font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1280 - 320)));
+  background-color: $color-body;
 
   a {
     text-decoration: none;
@@ -26,7 +27,14 @@ body {
     [c3-end c4-start] 1fr
     [c4-end c5-start] 1fr
     [c5-end c6-start] 1fr
-    [c6-end cpage-end];
+    // [c6-end cpage-end];
+    [c6-end c7-start] 1fr
+    [c7-end c8-start] 1fr
+    [c8-end c9-start] 1fr
+    [c9-end c10-start] 1fr
+    [c10-end c11-start] 1fr
+    [c11-end c12-start] 1fr
+    [c12-end cpage-end];
   grid-template-rows:
     [rpage-start r1-start] 1fr
     [r1-end r2-start] 1fr
@@ -34,17 +42,24 @@ body {
     [r3-end r4-start] 1fr
     [r4-end r5-start] 1fr
     [r5-end r6-start] 1fr
-    [r6-end rpage-end];
-  grid-gap: 15px;
+    // [r6-end rpage-end];
+    [r6-end r7-start] 1fr
+    [r7-end r8-start] 1fr
+    [r8-end r9-start] 1fr
+    [r9-end r10-start] 1fr
+    [r10-end r11-start] 1fr
+    [r11-end r12-start] 1fr
+    [r12-end rpage-end];
+  // grid-gap: 15px;
 }
 
 #sideMenu {
-  background-color: aquamarine;
+  background-color:$color-background;
   display: flex;
 }
 
 #sideMenu-name {
-  background-color: darkcyan;
+  // background-color: $color-background;
   flex-basis: 45%;
   // cursor: pointer;
   // transition: all 0.5s;
@@ -75,7 +90,7 @@ body {
 }
 
 #sideMenu-nav {
-  background-color: darkcyan;
+  background-color: $color-background;
   flex-basis: 45%;
 
   display: flex;
@@ -99,7 +114,9 @@ body {
 }
 
 .contentBox {
-  background-color: aquamarine;
+  background-color: $color-background;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 
@@ -114,12 +131,15 @@ body {
 @media (max-width: $screen-md) {
   #sideMenu {
     grid-column: cpage-start / cpage-end;
-    grid-row: r5-start / r6-end;
+    grid-row: r9-start / rpage-end;
 
     flex-direction: row;
     align-content: stretch;
     justify-content: space-between;
-    padding: 10px 15px;
+    margin: 7px 14px 14px;
+    padding: 10px;
+
+    border: 7px solid $color-border;
 
   }
 
@@ -135,9 +155,12 @@ body {
 
   .contentBox {
     grid-column: cpage-start / cpage-end;
-    grid-row: rpage-start / r4-end;
+    grid-row: rpage-start / r8-end;
 
-    padding: 10px 15px;
+    margin: 14px 14px 7px;
+    padding: 10px;
+
+    border: 7px solid $color-border;
   }
 
 }
