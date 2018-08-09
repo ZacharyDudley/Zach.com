@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const Contact = () => {
 
   return (
-    <div className="contentBox">
+    <div className="contentBox contact">
       <div className="section">
         <div className="contact-item">
           <a href="mailto:zachary@zacharydfriedman.com">
@@ -23,6 +23,7 @@ const Contact = () => {
           <a href="https://github.com/ZacharyDudley/">
             <i className="fab fa-github-square fa-4x" />
           </a>
+          <p>GitHub User: ZacharyDudley</p>
         </div>
 
         <div className="contact-item">
@@ -32,7 +33,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

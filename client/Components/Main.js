@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Main = props => {
   const { children } = props
@@ -8,6 +8,6 @@ const Main = props => {
       {children}
     </div>
   )
-}
+};
 
-export default Main
+export default Main;

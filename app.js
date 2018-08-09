@@ -16,5 +16,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(PORT, function(){
-  console.log('Listening');
+  console.log('Listening on 3000');
 });

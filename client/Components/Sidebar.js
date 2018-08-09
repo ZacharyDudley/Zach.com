@@ -1,5 +1,5 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = (props) => {
   // let i = 0
@@ -27,8 +27,8 @@ const Sidebar = (props) => {
   // })
 
   const downloadResumePdf = () => {
-    window.open('Resume-ZachFriedman.pdf')
-  }
+    window.open('Resume-ZachFriedman.pdf');
+  };
 
   return (
     <div id="sideMenu">
@@ -50,7 +50,7 @@ const Sidebar = (props) => {
         <NavLink to="/contact">CONTACT</NavLink>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

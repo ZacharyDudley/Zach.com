@@ -1,23 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Main from './Main';
-import Sidebar from './Sidebar';
-import Home from './Home';
-import Portfolio from './Portfolio';
-import Blog from './Blog';
-import Resume from './Resume';
-import Contact from './Contact';
+import { Main, Sidebar, Home, Portfolio, Resume, Contact, Modal } from './Components';
 
 const Routes = () => {
-
     return (
       <Router>
           <Main>
+          <Modal />
               <Route path="/" component={Sidebar} />
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/portfolio" component={Portfolio} />
-                <Route path="/blog" component={Blog} />
                 <Route path="/resume" component={Resume} />
                 <Route path="/contact" component={Contact} />
                 <Route component={Home} />
@@ -25,6 +18,6 @@ const Routes = () => {
           </Main>
       </Router>
   )
-}
+};
 
-export default Routes
+export default Routes;

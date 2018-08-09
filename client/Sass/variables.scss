@@ -1,0 +1,45 @@
+// BREAKPOINTS
+$screen-sm: 320px;
+$screen-md: 768px;
+$screen-lg: 960px;
+$screen-xl: 1280px;
+
+$screen-min: 320px;
+$screen-max: 1280px;
+
+$color-font: #000000;
+$color-border: #000000;
+$color-background: #7c7c7c;
+$color-body: #ffffff;
+$color-highlight: #61d5dd;
+
+// FONT SIZING
+$font-size-min: 14px;
+$font-size-max: 36px;
+$mod_1: 1.2;    // font scaling for mobile
+$mod_2: 1.5;    // font scaling for desktop
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($screen-min, $screen-max, $font-size-min, $font-size-max) {
+  $u1: unit($screen-min);
+  $u2: unit($screen-max);
+  $u3: unit($font-size-min);
+  $u4: unit($font-size-max);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $font-size-min;
+
+      @media screen and (min-width: $screen-min) {
+        font-size: calc(#{$font-size-min} + #{strip-unit($font-size-max - $font-size-min)} * ((100vw - #{$screen-min}) / #{strip-unit($screen-max - $screen-min)}));
+      }
+
+      @media screen and (min-width: $screen-max) {
+        font-size: $font-size-max;
+      }
+    }
+  }
+}

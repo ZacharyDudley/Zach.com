@@ -1,12 +1,30 @@
 @import 'variables';
+@import 'colors';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+
+html {
+  @include fluid-type($screen-min, $screen-max, $font-size-min, $font-size-max);
+}
 
 body {
   box-sizing: border-box;
   margin: 0;
-  // font-size: calc($font-size-min + ($fs-max - $fs-min) * ((100vw - $screen-sm) / ($screen-max - $screen-min)));
-  font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1280 - 320)));
   background-color: $color-body;
+
+  h1 {
+    font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
+    @include fluid-type($screen-min, $screen-max, $mod_1 * $mod_1 * $mod_1 * $font-size-min, $mod_2 * $mod_2 * $mod_2 * $font-size-min);
+  }
+
+  h2 {
+    font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
+    @include fluid-type($screen-min, $screen-max, $mod_1 * $mod_1 * $mod_1 * $font-size-min, $mod_2 * $mod_2 * $mod_2 * $font-size-min);
+  }
+
+  h3 {
+    font-size: $mod_1 * $mod_1 * 1rem;
+    @include fluid-type($screen-min, $screen-max, $mod_1 * $mod_1 * $font-size-min, $mod_2 * $mod_2 * $font-size-min);
+  }
 
   a {
     text-decoration: none;
@@ -54,7 +72,7 @@ body {
 }
 
 #sideMenu {
-  background-color:$color-background;
+  background-color: $color-background;
   display: flex;
 }
 
@@ -113,11 +131,115 @@ body {
   }
 }
 
+.section {
+  margin-bottom: 30px;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    margin: 0 15px 15px;
+  }
+}
+
 .contentBox {
   background-color: $color-background;
   overflow-x: hidden;
   overflow-y: scroll;
+
+  // &.portfolio {
+  //   .section::after {
+  //     content: '';
+  //     display: block;
+  //     border-bottom: 3px solid $color-border;
+  //   }
+  // }
 }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &.on {
+    display: block;
+  }
+
+  &.off {
+    display: none;
+  }
+}
+
+.pictureBox {
+  display: none;
+}
+
+
+
+/*
+  *
+  * MEDIA
+  * 768 to 960
+  * MEDIA
+  *
+*/
+
+@media (min-width: $screen-md + 1) {
+  #sideMenu {
+    grid-column: c10-start / cpage-end;
+    grid-row: rpage-start / rpage-end;
+
+    flex-direction: column;
+    // align-content: stretch;
+    // justify-content: space-between;
+    margin: 14px 14px 14px 7px;
+    padding: 10px;
+
+    border: 7px solid $color-border;
+  }
+
+  .contentBox {
+    grid-column: cpage-start / c9-end;
+    grid-row: rpage-start / rpage-end;
+
+    margin: 14px 7px 14px 14px;
+    padding: 10px;
+
+    border: 7px solid $color-border;
+
+    // .section::after {
+    //   content: '';
+    //   display: block;
+    //   border-bottom: 3px solid $color-border;
+    // }
+
+    // &.contact {
+    //   .contact-item {
+    //     text-align: center;
+    //   }
+    // }
+
+    // // &.home {
+    // //   .section::after {
+    // //     border: none;
+    // //   }
+    // // }
+  }
+
+}
+
+
+
+
 
 
 /*
@@ -140,7 +262,6 @@ body {
     padding: 10px;
 
     border: 7px solid $color-border;
-
   }
 
 
@@ -161,8 +282,55 @@ body {
     padding: 10px;
 
     border: 7px solid $color-border;
+
+    .section::after {
+      content: '';
+      display: block;
+      border-bottom: 3px solid $color-border;
+    }
+
+    &.contact {
+      .contact-item {
+        text-align: center;
+      }
+    }
+
+    // &.home {
+    //   .section::after {
+    //     border: none;
+    //   }
+    // }
   }
 
+
+  .section {
+    margin-bottom: 15px;
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      // &::after {
+      //   content: 'v';
+      //   display: inline-block;
+      //   position: absolute;
+      //   right: 0;
+      //   width: 20%;
+
+      //   &:focus {
+      //     content: 'x';
+      //   }
+      // }
+    }
+
+    .closed {
+      display: none;
+    }
+
+    .open {
+      display: block;
+    }
+  }
 }
 
 // .contentBox {
