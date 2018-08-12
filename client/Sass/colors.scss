@@ -2,7 +2,8 @@ $color-font: #000000;
 $color-border: #000000;
 $color-background: #7c7c7c;
 $color-body: #ffffff;
-$color-highlight: #61d5dd;
+$color-highlight: #0e5d63;
+$color-hover: lighten($color-highlight, 50%);
 
 // .black {
 //   $color-font: #000000;

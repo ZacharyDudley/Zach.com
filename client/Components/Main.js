@@ -6,13 +6,13 @@ const Main = props => {
   const { children } = props
 
   return (
-    <div id="page-grid" className={props.color}>
+    <div id="page-grid" className={props.settings.color}>
       {children}
     </div>
   )
 };
 
-const mapState = ({color}) => ({color});
+const mapState = ({settings}) => ({settings});
 
 const mapDispatch = (dispatch) => {
   return {}

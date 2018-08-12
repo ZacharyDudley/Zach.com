@@ -45,7 +45,6 @@ body {
     [c3-end c4-start] 1fr
     [c4-end c5-start] 1fr
     [c5-end c6-start] 1fr
-    // [c6-end cpage-end];
     [c6-end c7-start] 1fr
     [c7-end c8-start] 1fr
     [c8-end c9-start] 1fr
@@ -60,7 +59,6 @@ body {
     [r3-end r4-start] 1fr
     [r4-end r5-start] 1fr
     [r5-end r6-start] 1fr
-    // [r6-end rpage-end];
     [r6-end r7-start] 1fr
     [r7-end r8-start] 1fr
     [r8-end r9-start] 1fr
@@ -68,65 +66,52 @@ body {
     [r10-end r11-start] 1fr
     [r11-end r12-start] 1fr
     [r12-end rpage-end];
-  // grid-gap: 15px;
 }
 
-#sideMenu {
+.menu {
   background-color: $color-background;
   display: flex;
-}
 
-#sideMenu-name {
-  // background-color: $color-background;
-  flex-basis: 45%;
-  // cursor: pointer;
-  // transition: all 0.5s;
-  // flex: 0 1 10%;
+  &-title {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  // p {
-  //   text-align: left;
-  //   font-size: 6vh;
-  //   line-height: 1;
-  // }
-
-  // span {
-  //   cursor: pointer;
-  //   transition: 0.5s;
-  //   position: relative;
-  // }
-
-  // span:after {
-  //   content: 'UDLEY';
-  //   transition: 0.5s;
-  //   position: absolute;
-  //   opacity: 0;
-  // }
-
-  // &:hover span:after {
-  //   opacity: 1;
-  // }
-}
-
-#sideMenu-nav {
-  background-color: $color-background;
-  flex-basis: 45%;
-
-  display: flex;
-  flex-direction: column;
-  padding: 10px 15px;
-
-  a {
-    align-self: flex-end;
-    color: $color-font;
-    text-transform: lowercase;
-
-    &:hover {
-      color: white;
+    &_name {
+      margin: 0;
     }
 
-    &.active {
-      text-transform: uppercase;
-      color: $color-highlight;
+    &.sign {
+      background-image: url("/images/Signature.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      & > h3 {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &-nav {
+    background-color: $color-background;
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+
+    &_item {
+      align-self: flex-end;
+      color: $color-font;
+      text-transform: lowercase;
+
+      &.active {
+        text-transform: uppercase;
+        color: $color-highlight;
+      }
     }
   }
 }
@@ -202,7 +187,7 @@ body {
 */
 
 @media (min-width: $screen-md + 1) {
-  #sideMenu {
+  .menu {
     grid-column: c10-start / cpage-end;
     grid-row: rpage-start / rpage-end;
 
@@ -213,6 +198,10 @@ body {
     padding: 10px;
 
     border: 7px solid $color-border;
+
+    &-nav_item:hover {
+      color: $color-hover;
+    }
   }
 
   .contentBox {
@@ -259,7 +248,7 @@ body {
 */
 
 @media (max-width: $screen-md) {
-  #sideMenu {
+  .menu {
     grid-column: cpage-start / cpage-end;
     grid-row: r9-start / rpage-end;
 
@@ -270,15 +259,23 @@ body {
     padding: 10px;
 
     border: 7px solid $color-border;
-  }
 
+    &-title {
+      flex-basis: 60%;
 
-  #sideMenu-nav {
-    justify-content: space-evenly;
-    align-items: flex-end;
+      &_name .hide {
+        display: none;
+      }
+    }
 
-    a {
-      padding: 0;
+    &-nav {
+      flex-basis: 40%;
+      justify-content: space-evenly;
+      align-items: flex-end;
+
+      &_item {
+        padding: 0;
+      }
     }
   }
 

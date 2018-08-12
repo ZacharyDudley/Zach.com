@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const Menu = (props) => {
   const downloadResumePdf = () => {
@@ -7,26 +8,31 @@ const Menu = (props) => {
   };
 
   return (
-    <div id="sideMenu">
-      <div id="sideMenu-name">
-        <p>ZACHARY<br /><span>D</span><br /> FRIEDMAN</p>
+    <div className="menu">
+      <div className={`menu-title ${props.settings.title}`}>
+        <h3 className="menu-title_name">ZACHARY</h3>
+        <h3 className="menu-title_name middle">D</h3>
+        <h3 className="menu-title_name">FRIEDMAN</h3>
       </div>
 
-      <div id="sideMenu-nav">
-        <NavLink exact to="/">HOME</NavLink>
-        <NavLink to="/portfolio">PORTFOLIO</NavLink>
-        {
-          // <NavLink to="/blog">BLOG</NavLink>
-        }
-        <NavLink to="/resume">RE&#769;SUME&#769;</NavLink>
+      <div className="menu-nav">
+        <NavLink exact to="/" className="menu-nav_item">HOME</NavLink>
+        <NavLink to="/portfolio" className="menu-nav_item">PORTFOLIO</NavLink>
+        <NavLink to="/resume" className="menu-nav_item">RE&#769;SUME&#769;</NavLink>
         {
           props.location.pathname === '/resume' &&
-          <a className="sideMenu-sub" style={{fontSize: '2.25vh', paddingTop: '0'}} onClick={downloadResumePdf}>View as .pdf</a>
+          <a className="menu-nav_item sub" onClick={downloadResumePdf}>View as .pdf</a>
         }
-        <NavLink to="/contact">CONTACT</NavLink>
+        <NavLink to="/contact" className="menu-nav_item">CONTACT</NavLink>
       </div>
     </div>
   );
 };
 
-export default Menu;
+const mapState = ({settings}) => ({settings});
+
+const mapDispatch = (dispatch) => {
+  return {}
+};
+
+export default connect(mapState, mapDispatch)(Menu);
