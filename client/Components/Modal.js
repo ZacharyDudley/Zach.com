@@ -10,6 +10,7 @@ class Modal extends Component {
       password: ''
     }
 
+    this.closeModal = this.closeModal.bind(this);
     this.handlePassword = this.handlePassword.bind(this);
     this.handlePasswordInput = this.handlePasswordInput.bind(this);
   }
@@ -19,7 +20,11 @@ class Modal extends Component {
       if (event.key === 'Enter' && !this.state.on) {
         this.setState({on: true, password: ''});
       }
-    })
+    });
+  }
+
+  closeModal() {
+    this.setState({on: false, password: ''});
   }
 
   handlePasswordInput(event) {
@@ -33,7 +38,7 @@ class Modal extends Component {
       this.props.enterPassword(this.state.password);
     }
 
-    this.setState({on: false, password: ''});
+    this.closeModal();
   }
 
   render() {
@@ -45,9 +50,12 @@ class Modal extends Component {
             type="text"
             name="password"
             tabIndex="-1"
+            autoComplete="off"
             onChange={this.handlePasswordInput}
           />
         </form>
+        <div className="modal-button_close" onClick={this.closeModal} />
+        <div className="modal-background" />
       </div>
     );
   }

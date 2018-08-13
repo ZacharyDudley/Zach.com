@@ -151,24 +151,38 @@ body {
   height: 100%;
 
   input {
+    width: 150px;
+    max-width: 150px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    margin: 0 calc((100% - 150px) / 2);
   }
 
-  &.on {
-    display: block;
-    background-color: black;
-    opacity: 0.5;
+  &-button_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
 
-    input {
-      opacity: 1;
+    &:after {
+      content: 'X';
+      font-size: 55px;
+      line-height: 1;
+      margin: 0 5px;
+      color: #afafaf;
     }
   }
 
+  &-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+
   &.off {
-    width: 0;
-    overflow: hidden;
+    visibility: hidden;
   }
 }
 
