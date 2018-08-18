@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import '../Sass/index.scss';
-
 
 class Home extends Component {
   constructor(){
@@ -98,7 +96,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="contentBox home">
+      <div className="content home">
         <div className="section">
           <h1>{this.state.nameOne}</h1>
           <h1>{this.state.nameTwo}</h1>

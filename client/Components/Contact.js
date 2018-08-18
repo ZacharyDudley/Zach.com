@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
 
   return (
-    <div className="contentBox contact">
+    <div className="content contact">
       <div className="section">
         <div className="contact-item">
           <a href="mailto:zachary@zacharydfriedman.com">
