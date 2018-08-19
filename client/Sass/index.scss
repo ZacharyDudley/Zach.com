@@ -26,8 +26,17 @@ body {
     @include fluid-type($screen-min, $screen-max, $mod_1 * $mod_1 * $font-size-min, $mod_2 * $mod_2 * $font-size-min);
   }
 
+  i {
+    @include fluid-type($screen-min, $screen-max, $icon-size-min, $icon-size-max);
+  }
+
   a {
     text-decoration: none;
+    color: $color-link;
+
+    &:hover {
+      color: $color-hover;
+    }
   }
 }
 
@@ -122,6 +131,12 @@ body {
   border: 7px solid $color-border;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
 
   &.portfolio,
   &.resume {
@@ -137,6 +152,15 @@ body {
       }
     }
   }
+
+  &.portfolio {
+    .section-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .section {
@@ -148,6 +172,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: 0 1 100%;
 
     &_item {
       flex: 0 1 auto;
@@ -158,6 +183,10 @@ body {
 .subsection {
   &-title {
     text-transform: lowercase;
+  }
+
+  &-body_headline__date {
+    font-style: italic;
   }
 }
 
@@ -320,10 +349,19 @@ body {
       .section {
         &-body {
           margin-left: 15px;
+
+          &_link {
+            flex: 0 1 20%;
+          }
+
+          &_text {
+            flex: 0 1 80%;
+          }
         }
 
         &-gallery {
           margin-right: 15px;
+          margin-top: 15px;
 
           &_item {
             margin: 5px;
@@ -354,7 +392,7 @@ body {
   }
 
   .section {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 
     &-title {
       margin-top: 0;
@@ -363,26 +401,37 @@ body {
 
     &-body {
       margin-bottom: 15px;
-    }
 
-    .closed {
-      display: none;
-    }
-
-    .open {
-      display: block;
+      &_text p {
+        margin: 5px 0;
+      }
     }
   }
 
   .subsection {
-    margin-left: 15px;
+    margin: 0 15px 15px;
 
     &-title {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     &-body {
       margin-left: 15px;
+
+      &_headline {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__place,
+        &__date {
+          margin: 5px 0;
+        }
+      }
+
+      &_text {
+        margin: 5px 0;
+      }
     }
   }
 }

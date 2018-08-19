@@ -100,9 +100,11 @@ const Resume = () => {
                 <div key={`experience-${section.id}`} className="subsection">
                   <h3 className="subsection-title">{section.title}</h3>
                   <div className="subsection-body">
-                    <p className="subsection-body_title">{section.company}</p>
-                    <p>{section.date}</p>
-                    <p>{section.description}</p>
+                    <div className="subsection-body_headline">
+                      <p className="subsection-body_headline__place">{section.company}</p>
+                      <p className="subsection-body_headline__date">{section.date}</p>
+                    </div>
+                    <p className="subsection-body_text">{section.description}</p>
                   </div>
                 </div>
               )
@@ -120,8 +122,11 @@ const Resume = () => {
                 <div key={`education-${section.id}`} className="subsection">
                   <h3 className="subsection-title">{section.name}</h3>
                   <div className="subsection-body">
-                    <p>{section.date} | {section.location}</p>
-                    <p>{section.degree}</p>
+                    <div className="subsection-body_headline">
+                      <p className="subsection-body_headline__place">{section.location}</p>
+                      <p className="subsection-body_headline__date">{section.date}</p>
+                    </div>
+                    <p className="subsection-body_text">{section.degree}</p>
                   </div>
                 </div>
               )

@@ -1,9 +1,13 @@
-$color-font: #000000;
-$color-border: #000000;
-$color-background: #7c7c7c;
+// DEFAULT COLORS
+// BLACK  WHITE  GREY
 $color-body: #ffffff;
-$color-highlight: #0e5d63;
-$color-hover: lighten($color-highlight, 50%);
+$color-background: #afafaf;
+$color-border: #000000;
+$color-font: #000000;
+$color-link: #000000;
+$color-highlight: #232323;
+$color-hover: #ffffff;
+// $color-hover: lighten($color-highlight, 50%);
 
 // .black {
 //   $color-font: #000000;
