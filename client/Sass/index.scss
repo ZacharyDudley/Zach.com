@@ -159,6 +159,14 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
+
+      &_link {
+        flex: 0 1 20%;
+      }
+
+      &_text {
+        flex: 0 1 80%;
+      }
     }
   }
 }
@@ -166,6 +174,12 @@ body {
 .section {
   &-title {
     text-transform: uppercase;
+  }
+
+  &-body {
+    &_text p {
+      margin-top: 0;
+    }
   }
 
   &-gallery {
@@ -275,6 +289,13 @@ body {
     grid-row: rpage-start / rpage-end;
     margin: 14px 7px 14px 14px;
     padding: 10px;
+
+    &.home {
+      .section {
+        margin-top: 25vh;
+        margin-left: 15vw;
+      }
+    }
   }
 }
 
@@ -295,6 +316,11 @@ body {
   }
 
   .content {
+    &.portfolio {
+      .section-body {
+        margin-left: 30px;
+      }
+    }
     .section {
       margin-bottom: 30px;
 
@@ -339,24 +365,10 @@ body {
   }
 
   .content {
-    &.home {
-      .section {
-        margin: 20vh 15px 0;
-      }
-    }
-
     &.portfolio {
       .section {
         &-body {
           margin-left: 15px;
-
-          &_link {
-            flex: 0 1 20%;
-          }
-
-          &_text {
-            flex: 0 1 80%;
-          }
         }
 
         &-gallery {
@@ -401,10 +413,6 @@ body {
 
     &-body {
       margin-bottom: 15px;
-
-      &_text p {
-        margin: 5px 0;
-      }
     }
   }
 
