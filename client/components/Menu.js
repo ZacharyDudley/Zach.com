@@ -10,9 +10,12 @@ const Menu = (props) => {
   return (
     <div className="menu">
       <div className={`menu-title ${props.settings.title}`}>
-        <h3 className="menu-title_name">ZACHARY</h3>
+        <h3 className="menu-title_name first">ZACHARY</h3>
         <h3 className="menu-title_name middle">D</h3>
-        <h3 className="menu-title_name">FRIEDMAN</h3>
+        <h3 className="menu-title_name last">FRIEDMAN</h3>
+        <h1 className="menu-title_name__thin first">Z</h1>
+        <h1 className="menu-title_name__thin middle">D</h1>
+        <h1 className="menu-title_name__thin last">F</h1>
       </div>
 
       <div className="menu-nav">

@@ -31,6 +31,9 @@ body {
   }
 
   a {
+    font-size: $mod_1 * 1rem;
+    @include fluid-type($screen-min, $screen-max, $mod_1 * $font-size-min, $mod_2 * $font-size-min);
+
     text-decoration: none;
     color: $color-link;
 
@@ -91,6 +94,11 @@ body {
 
     &_name {
       margin: 0;
+
+      &__thin {
+        display: none;
+        margin: 0;
+      }
     }
 
     &.sign {
@@ -111,7 +119,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    padding: 10px 15px;
+    justify-content: space-evenly;
 
     &_item {
       align-self: flex-end;
@@ -136,6 +144,12 @@ body {
 
   &::-webkit-scrollbar {
     width: 0 !important;
+  }
+
+  &.home {
+    .section {
+      margin: 20vh 0 0 10vw;
+    }
   }
 
   &.portfolio,
@@ -169,11 +183,18 @@ body {
       }
     }
   }
+
+  &.contact {
+    .contact-item {
+      display: flex;
+    }
+  }
 }
 
 .section {
   &-title {
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   &-body {
@@ -199,8 +220,14 @@ body {
     text-transform: lowercase;
   }
 
-  &-body_headline__date {
-    font-style: italic;
+  &-body_headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__date {
+      font-style: italic;
+    }
   }
 }
 
@@ -264,16 +291,15 @@ body {
     align-content: stretch;
     justify-content: space-between;
     margin: 7px 14px 14px;
-    padding: 10px;
   }
 
   .content {
     grid-column: cpage-start / cpage-end;
     grid-row: rpage-start / r8-end;
     margin: 14px 14px 7px;
-    padding: 10px;
   }
 }
+
 
 @media (orientation: landscape) {
   .menu {
@@ -281,21 +307,16 @@ body {
     grid-row: rpage-start / rpage-end;
     flex-direction: column;
     margin: 14px 14px 14px 7px;
-    padding: 10px;
+
+    &-nav {
+      padding-bottom: 25%;
+    }
   }
 
   .content {
     grid-column: cpage-start / c9-end;
     grid-row: rpage-start / rpage-end;
     margin: 14px 7px 14px 14px;
-    padding: 10px;
-
-    &.home {
-      .section {
-        margin-top: 25vh;
-        margin-left: 15vw;
-      }
-    }
   }
 }
 
@@ -310,25 +331,77 @@ body {
 
 @media (min-width: $screen-md + 1) {
   .menu {
-    &-nav_item:hover {
-      color: $color-hover;
+    padding: 10px;
+
+    &-nav {
+      margin-right: 15px;
     }
   }
 
   .content {
+    padding: 20px;
+
     &.portfolio {
       .section-body {
         margin-left: 30px;
       }
     }
-    .section {
-      margin-bottom: 30px;
 
-      &-gallery {
-        &_item {
-          margin: 15px;
-          height: 19vw;
+    &.resume {
+      .section:first-of-type {
+        .subsection {
+          margin-left: 0;
+
+          &-title {
+            margin-left: 30px;
+          }
         }
+      }
+    }
+
+    &.contact {
+      .contact-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        p {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .section {
+    margin-bottom: 30px;
+
+    &-gallery {
+      &_item {
+        margin: 15px;
+        height: 19vw;
+      }
+    }
+  }
+
+  .subsection {
+    margin: 0 15px 30px 30px;
+
+    &-title {
+      margin-bottom: 5px;
+    }
+
+    &-body {
+      margin-left: 30px;
+
+      &_headline {
+        &__place,
+        &__date {
+          margin: 5px 0;
+        }
+      }
+
+      &_text {
+        margin: 5px 0;
       }
     }
   }
@@ -345,18 +418,27 @@ body {
 
 @media (max-width: $screen-md) {
   .menu {
-    &-title {
-      flex-basis: 60%;
+    padding: 5px;
 
-      &_name .hide {
-        display: none;
+    &-title {
+      &_name {
+        @media (orientation: landscape) {
+          &__thin {
+            display: block;
+            font-size: 45px;
+          }
+
+          &.first,
+          &.middle,
+          &.last {
+            display: none;
+          }
+        }
       }
     }
 
     &-nav {
-      flex-basis: 40%;
-      justify-content: space-evenly;
-      align-items: flex-end;
+      margin-right: 5px;
 
       &_item {
         padding: 0;
@@ -365,6 +447,8 @@ body {
   }
 
   .content {
+    padding: 10px;
+
     &.portfolio {
       .section {
         &-body {
@@ -397,7 +481,8 @@ body {
 
     &.contact {
       .contact-item {
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
       }
     }
@@ -407,7 +492,6 @@ body {
     margin-bottom: 30px;
 
     &-title {
-      margin-top: 0;
       margin-bottom: 15px;
     }
 
@@ -427,10 +511,6 @@ body {
       margin-left: 15px;
 
       &_headline {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
         &__place,
         &__date {
           margin: 5px 0;
