@@ -25,7 +25,15 @@ export default function reducer(state = defaultState, action) {
 
 export const checkPassword = (password) => dispatch => {
   switch (password) {
-    case 'blue':
+    case 'black':
+      dispatch(changeColor(password));
+      break;
+
+    case 'orange':
+      dispatch(changeColor(password));
+      break;
+
+    case 'teal':
       dispatch(changeColor(password));
       break;
 

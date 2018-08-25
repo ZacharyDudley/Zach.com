@@ -1,15 +1,19 @@
 @import 'variables';
-@import 'colors';
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
+
+@font-face {
+  font-family: 'dtJakob';
+  src: url(../../public/font/dTJakobVariableConceptGX.ttf) format('truetype');
+}
 
 html {
   @include fluid-type($screen-min, $screen-max, $font-size-min, $font-size-max);
 }
 
 body {
+  font-family: 'dtJakob';
   box-sizing: border-box;
   margin: 0;
-  background-color: $color-body;
 
   h1 {
     font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
@@ -35,11 +39,6 @@ body {
     @include fluid-type($screen-min, $screen-max, $mod_1 * $font-size-min, $mod_2 * $font-size-min);
 
     text-decoration: none;
-    color: $color-link;
-
-    &:hover {
-      color: $color-hover;
-    }
   }
 }
 
@@ -78,12 +77,45 @@ body {
     [r10-end r11-start] 1fr
     [r11-end r12-start] 1fr
     [r12-end rpage-end];
+
+    &.black {
+      $color-body: #ffffff;
+      $color-background: #afafaf;
+      $color-border: #000000;
+      $color-font: #000000;
+      $color-link: #000000;
+      $color-highlight: #232323;
+      $color-hover: #ffffff;
+      @import 'theme';
+    }
+
+    &.teal {
+      $color-body: #62a8ac;
+      $color-background: #78cad2;
+      $color-border: #625f63;
+      $color-font: #625f63;
+      $color-link: #625f63;
+      $color-highlight: #5497a7;
+      $color-hover: #a1d2ce;
+      @import 'theme';
+    }
+
+    &.orange {
+      $color-body: #d8cdbc;
+      $color-background: #fcb95a;
+      $color-border: #625f63;
+      $color-font: #625f63;
+      $color-link: #625f63;
+      $color-highlight: #ff9f1c;
+      $color-hover: #f2dab8;
+      @import 'theme';
+    }
+
 }
 
 .menu {
   display: flex;
-  background-color: $color-background;
-  border: 7px solid $color-border;
+    border: 7px solid;
 
   &-title {
     flex-basis: 50%;
@@ -107,14 +139,14 @@ body {
       background-repeat: no-repeat;
       background-position: center;
 
-      & > h3 {
+      & > h3,
+      & > h1 {
         visibility: hidden;
       }
     }
   }
 
   &-nav {
-    background-color: $color-background;
     flex-basis: 50%;
 
     display: flex;
@@ -123,20 +155,17 @@ body {
 
     &_item {
       align-self: flex-end;
-      color: $color-font;
       text-transform: lowercase;
 
       &.active {
         text-transform: uppercase;
-        color: $color-highlight;
       }
     }
   }
 }
 
 .content {
-  background-color: $color-background;
-  border: 7px solid $color-border;
+  border: 7px solid;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -158,7 +187,7 @@ body {
       &::after {
         content: '';
         display: block;
-        border-bottom: 3px solid $color-border;
+        border-bottom: 3px solid;
       }
 
       &:last-child::after {
@@ -420,19 +449,17 @@ body {
   .menu {
     padding: 5px;
 
-    &-title {
-      &_name {
-        @media (orientation: landscape) {
-          &__thin {
-            display: block;
-            font-size: 45px;
-          }
+    &-title_name {
+      @media (orientation: landscape) {
+        &__thin {
+          display: block;
+          font-size: 45px;
+        }
 
-          &.first,
-          &.middle,
-          &.last {
-            display: none;
-          }
+        &.first,
+        &.middle,
+        &.last {
+          display: none;
         }
       }
     }

@@ -1,0 +1,50 @@
+#page-grid {
+  background-color: $color-body;
+  color: $color-font;
+
+  // h1,
+  // h2,
+  // h3,
+  // p {
+  //   color: $color-font;
+  // }
+
+  i {
+    color: $color-font;
+
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}
+
+.menu {
+  background-color: $color-background;
+  border-color: $color-border;
+
+  &-nav {
+    background-color: $color-background;
+
+    &_item {
+      color: $color-font;
+
+      &.active {
+        color: $color-highlight;
+      }
+    }
+  }
+}
+
+.content {
+  background-color: $color-background;
+  border-color: $color-border;
+
+  &.portfolio,
+  &.resume {
+    .section {
+      &::after {
+        border-bottom-color: $color-border;
+      }
+    }
+  }
+}

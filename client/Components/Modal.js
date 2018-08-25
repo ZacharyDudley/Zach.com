@@ -24,6 +24,8 @@ class Modal extends Component {
   }
 
   closeModal() {
+    let inputField = document.getElementById('inputField');
+    inputField.value = '';
     this.setState({on: false, password: ''});
   }
 
@@ -46,9 +48,9 @@ class Modal extends Component {
       <div className={this.state.on ? 'modal on' : 'modal off'}>
         <form onSubmit={this.handlePassword}>
           <input
-            id="password"
+            id="inputField"
             type="text"
-            name="password"
+            name="inputField"
             tabIndex="-1"
             autoComplete="off"
             onChange={this.handlePasswordInput}
