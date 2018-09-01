@@ -1,6 +1,7 @@
 export { default as Main} from './Main';
 export { default as Home} from './Home';
 export { default as Menu} from './Menu';
+export { default as About} from './About';
 export { default as Portfolio} from './Portfolio';
 export { default as PortfolioProject} from './PortfolioProject';
 export { default as Resume} from './Resume';

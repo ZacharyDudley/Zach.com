@@ -19,7 +19,7 @@ const Menu = (props) => {
       </div>
 
       <div className="menu-nav">
-        <NavLink exact to="/" className="menu-nav_item">HOME</NavLink>
+        <NavLink to="/about" className="menu-nav_item">ABOUT</NavLink>
         <NavLink to="/portfolio" className="menu-nav_item">PORTFOLIO</NavLink>
         <NavLink to="/resume" className="menu-nav_item">RE&#769;SUME&#769;</NavLink>
         {
