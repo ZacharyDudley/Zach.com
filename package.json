@@ -2,7 +2,7 @@
   "name": "zacharydudleyfriedman.com",
   "version": "1.0.0",
   "engines": {
-    "node": "8.4.0"
+    "node": "10.9.0"
   },
   "main": "app.js",
   "scripts": {
@@ -37,6 +37,7 @@
     "eslint": "^4.13.1",
     "eslint-config-fullstack": "^3.0.0",
     "eslint-plugin-react": "^7.5.1",
+    "file-loader": "^2.0.0",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.1",
     "redux-devtools-extension": "^2.13.5",
