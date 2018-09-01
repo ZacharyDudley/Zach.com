@@ -1,21 +1,21 @@
+h1,
+h2,
+h3,
+p {
+  color: $color-font;
+}
+
+i {
+  color: $color-font;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
 #page-grid {
   background-color: $color-body;
   color: $color-font;
-
-  // h1,
-  // h2,
-  // h3,
-  // p {
-  //   color: $color-font;
-  // }
-
-  i {
-    color: $color-font;
-
-    &:hover {
-      color: $color-hover;
-    }
-  }
 }
 
 .menu {
