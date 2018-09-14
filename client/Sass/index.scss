@@ -1,19 +1,38 @@
 @import 'variables';
-// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700');
-
-@font-face {
-  font-family: 'dtJakob';
-  src: url(../../public/font/dTJakobVariableConceptGX.ttf) format('truetype');
-}
 
 html {
   @include fluid-type($screen-min, $screen-max, $font-size-min, $font-size-max);
 }
 
 body {
-  font-family: 'dtJakob';
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+
+  h1,
+  h2,
+  h3,
+  a {
+    font-family: 'Spectral', serif;
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+
+  h2,
+  a.active {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  a {
+    font-weight: 400;
+  }
 
   h1 {
     font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
