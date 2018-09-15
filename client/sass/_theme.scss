@@ -18,6 +18,10 @@ i {
   color: $color-font;
 }
 
+.background {
+  background-color: $color-background;
+}
+
 .menu {
   background-color: $color-background;
   border-color: $color-border;
@@ -36,7 +40,6 @@ i {
 }
 
 .content {
-  background-color: $color-background;
   border-color: $color-border;
 
   &.portfolio,

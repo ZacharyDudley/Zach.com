@@ -132,9 +132,22 @@ body {
 
 }
 
+.background {
+  pointer-events: none;
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/Portrait.png');
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    transition: background-size 0.25s, background-position-x 0.1s, background-position-y 0.25s;
+  }
+}
+
 .menu {
   display: flex;
-    border: 7px solid;
+  border: 7px solid;
 
   &-title {
     flex-basis: 50%;
@@ -184,6 +197,7 @@ body {
 }
 
 .content {
+  z-index: 1;
   border: 7px solid;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -280,6 +294,7 @@ body {
 }
 
 .modal {
+  z-index: 2;
   display: block;
   position: absolute;
   top: 0;
@@ -332,6 +347,12 @@ body {
 */
 
 @media (orientation: portrait) {
+  .background-image {
+    background-size: auto 100%;
+    background-position-x: calc(100% + 20vw);
+    background-position-y: 10vw;
+  }
+
   .menu {
     grid-column: cpage-start / cpage-end;
     grid-row: r9-start / rpage-end;
@@ -341,6 +362,7 @@ body {
     margin: 7px 14px 14px;
   }
 
+  .background,
   .content {
     grid-column: cpage-start / cpage-end;
     grid-row: rpage-start / r8-end;
@@ -350,6 +372,12 @@ body {
 
 
 @media (orientation: landscape) {
+  .background-image {
+    background-size: 100%;
+    background-position-x: 25vw;
+    background-position-y: 40%;
+  }
+
   .menu {
     grid-column: c10-start / cpage-end;
     grid-row: rpage-start / rpage-end;
@@ -361,6 +389,7 @@ body {
     }
   }
 
+  .background,
   .content {
     grid-column: cpage-start / c9-end;
     grid-row: rpage-start / rpage-end;

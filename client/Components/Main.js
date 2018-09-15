@@ -7,6 +7,9 @@ const Main = props => {
 
   return (
     <div id="page-grid" className={props.settings.color}>
+      <div className="background">
+        <div className="background-image" />
+      </div>
       {children}
     </div>
   )
