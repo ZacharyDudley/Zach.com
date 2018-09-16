@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Main, Menu, Home, About, Portfolio, Resume, Contact, Modal } from './components';
+import { Main, Menu, Home, About, Portfolio, Resume, Contact } from './components';
 
 const Routes = () => {
     return (
       <Router>
           <Main>
-          <Modal />
               <Route path="/" component={Menu} />
             <Switch>
                 <Route exact path="/" component={Home} />

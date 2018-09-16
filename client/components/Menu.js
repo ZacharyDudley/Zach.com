@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toggleModal } from '../store';
 
 const Menu = (props) => {
   const downloadResumePdf = () => {
@@ -9,12 +10,12 @@ const Menu = (props) => {
 
   return (
     <div className="menu">
-      <NavLink to="/" className={`menu-title ${props.settings.title}`}>
+      <div onClick={() => {props.setModal(!props.settings.viewModal)}} className={`menu-title ${props.settings.title}`}>
         <h3 className="menu-title_name first">ZACHARY</h3>
         <h3 className="menu-title_name middle">D</h3>
         <h3 className="menu-title_name last">FRIEDMAN</h3>
         <h1 className="menu-title_name__thin">ZDF</h1>
-      </NavLink>
+      </div>
 
       <div className="menu-nav">
         <NavLink to="/about" className="menu-nav_item">ABOUT</NavLink>
@@ -33,7 +34,11 @@ const Menu = (props) => {
 const mapState = ({settings}) => ({settings});
 
 const mapDispatch = (dispatch) => {
-  return {}
+  return {
+    setModal(view) {
+      dispatch(toggleModal(view));
+    }
+  }
 };
 
 export default connect(mapState, mapDispatch)(Menu);
