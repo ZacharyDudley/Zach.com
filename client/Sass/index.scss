@@ -109,9 +109,20 @@ body {
     }
 
     &.teal {
-      $color-body: #62a8ac;
+      $color-body: #b1b1b1;
+      $color-background: #1694a0;
+      $color-border: #525252;
+      $color-font: #000000;
+      $color-link: #b1b1b1;
+      $color-highlight: #b1b1b1;
+      $color-hover: #b1b1b1;
+      @import 'theme';
+    }
+
+    &.mint {
+      $color-body: #00dabd;
       $color-background: #78cad2;
-      $color-border: #625f63;
+      $color-border: #00dabd;
       $color-font: #625f63;
       $color-link: #625f63;
       $color-highlight: #5497a7;
